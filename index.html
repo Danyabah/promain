@@ -18,25 +18,37 @@
   <body>
     <header class="header">
       <img src="./img/logo.svg" class="header__logo" alt="" />
-      <a class="btn btn-s">Заказать демо</a>
+      <nav class="header__nav">
+        <a href="#about" class="header__link">О продукте</a>
+        <a href="#tech" class="header__link">Технология</a>
+        <a href="#advantage" class="header__link">Преимущества</a>
+        <a href="#aud" class="header__link">Аудитория</a>
+      </nav>
+      <a class="btn btn-s" href="#form">Заказать демо</a>
     </header>
     <main class="main">
       <section class="intro">
         <div class="container">
           <div class="intro__col">
+            <div class="intro__rus">
+              <img src="./img/check.svg" alt="" />
+              <h3 class="text-up">Включен в Реестр российского ПО</h3>
+            </div>
             <h1 class="title-h intro__title">
-              Находите точки <br />
-              роста в глубине <br />процессов
+              Находите <br class="m-v" />
+              точки <br class="m-h" />
+              роста <br class="m-v" />
+              в глубине <br class="m-v" />процессов
             </h1>
-            <p class="intro__text text-b">
+            <p class="text-b intro__text">
               Находите точки роста в бизнес-процессах и снижайте риски с
-              технологией <br />
+              технологией <br class="m-h" />
               Process Mining
             </p>
-            <a class="btn intro__btn">Заказать демо</a>
+            <a class="btn intro__btn" href="#form">Заказать демо</a>
           </div>
         </div>
-        <div class="video">
+        <div class="video" id="about">
           <div class="container">
             <div class="video__col">
               <div class="video__container">
@@ -64,7 +76,7 @@
           </div>
         </div>
       </section>
-      <section class="tech">
+      <section class="tech" id="tech">
         <div class="container">
           <div class="section__top">
             <div class="section__vec">
@@ -147,7 +159,7 @@
           </div>
         </div>
       </section>
-      <section class="aud">
+      <section class="aud" id="aud">
         <div class="container">
           <div class="section__top">
             <div class="section__vec">
@@ -240,7 +252,7 @@
           </div>
         </div>
       </section>
-      <section class="form">
+      <section class="form" id="form">
         <div class="container">
           <div class="section__top">
             <div class="section__vec">
