@@ -17,14 +17,22 @@
   </head>
   <body>
     <header class="header">
-      <img src="./img/logo.svg" class="header__logo" alt="" />
-      <nav class="header__nav">
-        <a href="#about" class="header__link">О продукте</a>
-        <a href="#tech" class="header__link">Технология</a>
-        <a href="#advantage" class="header__link">Преимущества</a>
-        <a href="#aud" class="header__link">Аудитория</a>
-      </nav>
-      <a class="btn btn-s" href="#form">Заказать демо</a>
+      <div class="header__left">
+        <img src="./img/logo.svg" class="header__logo" alt="" />
+        <nav class="header__nav">
+          <a href="#about" class="header__link">О продукте</a>
+          <a href="#tech" class="header__link">Технология</a>
+          <a href="#advantage" class="header__link">Преимущества</a>
+          <a href="#aud" class="header__link">Аудитория</a>
+        </nav>
+      </div>
+      <div class="header__right">
+        <div class="header__switch">
+          <span class="header__en header__active">EN</span>
+          <span class="header__ru">RU</span>
+        </div>
+        <a class="btn btn-s" href="#form">Заказать демо</a>
+      </div>
     </header>
     <main class="main">
       <section class="intro">
@@ -169,45 +177,46 @@
             </div>
 
             <h2 class="title-b section__title aud__title">
-              В любой сфере найдется применение
+              Кто использует Промайн
             </h2>
             <h3 class="text-gr section__subtitle aud__subtitle">
-              Промайн как цифровое решение используют в менеджменте, закупках,
-              логистике, производстве и документообороте
+              Разные функции организаций и на разных уровнях управления
+              используют Промайн для решения критичных задач.
             </h3>
           </div>
           <div class="section__items">
             <div class="section__row">
               <div class="section__item">
-                <!-- <img
-                  src="./img/num2.svg"
+                <img
+                  src="./img/check.svg"
                   alt=""
                   class="section__item-img aud-img"
-                /> -->
-                <div class="aud-img"></div>
+                />
                 <div class="section__item-info">
                   <h3 class="title-n section__item-title">
                     Руководители и владельцы бизнес-процессов
                   </h3>
                   <h4 class="text-gr section__item-text">
-                    Сравнивают реальные бизнес-процессы с эталоном и внедряют
-                    лучшие практики во все отделы компании
+                    Отслеживают в онлайн-режиме показатели процесса, используют
+                    Промайн для поиска «узких мест» процесса, тестируют
+                    предложения по оптимизации до их внедрения с помощью
+                    симуляции
                   </h4>
                 </div>
               </div>
               <div class="section__item section__item-sm">
-                <!-- <img
-                  src="./img/num2.svg"
+                <img
+                  src="./img/check.svg"
                   alt=""
                   class="section__item-img aud-img"
-                /> -->
-                <div class="aud-img"></div>
+                />
                 <div class="section__item-info">
                   <h3 class="title-n section__item-title">
                     Службы внутреннего аудита
                   </h3>
                   <h4 class="text-gr section__item-text">
-                    Автоматизируют контроль за индикаторами риска и проблемами в
+                    Выполняют проверки в Промайне на полной популяции данных,
+                    автоматизируют контроли за индикаторами риска и проблемами в
                     процессах
                   </h4>
                 </div>
@@ -215,36 +224,36 @@
             </div>
             <div class="section__row">
               <div class="section__item section__item-sm">
-                <!-- <img
-                  src="./img/num2.svg"
+                <img
+                  src="./img/check.svg"
                   alt=""
                   class="section__item-img aud-img"
-                /> -->
-                <div class="aud-img"></div>
+                />
+
                 <div class="section__item-info">
                   <h3 class="title-n section__item-title">
                     Команды цифровой трансформации
                   </h3>
                   <h4 class="text-gr section__item-text">
-                    Построят модель бизнес-процесса с помощью симуляции и
-                    протестируют его до запуска
+                    Анализируют реальное состояние автоматизации процесса, в
+                    т.ч. находят с помощью Промайн потенциал автоматизации
                   </h4>
                 </div>
               </div>
               <div class="section__item">
-                <!-- <img
-                  src="./img/num2.svg"
+                <img
+                  src="./img/check.svg"
                   alt=""
                   class="section__item-img aud-img"
-                /> -->
-                <div class="aud-img"></div>
+                />
+
                 <div class="section__item-info">
                   <h3 class="title-n section__item-title">
                     Процессные офисы и методологи
                   </h3>
                   <h4 class="text-gr section__item-text">
-                    Увидят в реальном времени процессы всех подрядчиков и
-                    дочерних компаний на интерактивных дашбордах
+                    Сравнивают в Промайне реальные бизнес-процессы с эталоном и
+                    внедряют лучшие практики во все отделы компании
                   </h4>
                 </div>
               </div>
@@ -262,28 +271,30 @@
             </div>
 
             <h2 class="title-b section__title form__title">
-              Проверьте Промайн в деле и задайте любые вопросы
+              Проверьте Промайн в деле
             </h2>
             <h3 class="text-gr section__subtitle form__subtitle">
-              Оставьте данные и мы вернемся к вам с ответом в течение двух дней
+              Оставьте свои контактные данные, и мы проведем для вас
+              демонстрацию. Наши эксперты свяжутся с вами в течение двух рабочих
+              дней.
             </h3>
           </div>
+          <form action="" class="form__item">
+            <div class="form__body">
+              <input type="text" class="inp" placeholder="Ваше имя" />
+              <input type="text" class="inp" placeholder="Компания" />
+              <input type="tel" class="inp" placeholder="Телефон" />
+              <input type="email" class="inp" placeholder="Электронная почта" />
+            </div>
+            <div class="form__bottom">
+              <p class="text-form">
+                Заполняя форму, я принимаю
+                <a href=""> условия передачи информации</a>
+              </p>
+              <button class="btn" type="submit">Заказать демо</button>
+            </div>
+          </form>
         </div>
-        <form action="" class="form__item">
-          <div class="form__body">
-            <input type="text" class="inp" placeholder="Ваше имя" />
-            <input type="text" class="inp" placeholder="Компания" />
-            <input type="tel" class="inp" placeholder="Телефон" />
-            <input type="email" class="inp" placeholder="Электронная почта" />
-          </div>
-          <div class="form__bottom">
-            <p class="text-form">
-              Заполняя форму, я принимаю
-              <a href=""> условия передачи информации</a>
-            </p>
-            <button class="btn" type="submit">Заказать демо</button>
-          </div>
-        </form>
       </section>
     </main>
     <footer class="footer">
