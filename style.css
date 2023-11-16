@@ -267,18 +267,18 @@ body {
   letter-spacing: 0.14px;
 }
 .text-up {
-  color: var(--color-gray-400);
-  font-family: Golos;
+  color: var(--color-gray-600);
+  font-family: Golos Text VF;
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 130%;
   letter-spacing: 1.68px;
   text-transform: uppercase;
 }
 .text-gr {
   color: var(--color-gray-600);
-  font-family: Golos;
+  font-family: Golos Text VF;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -287,7 +287,7 @@ body {
 }
 .text-form {
   color: var(--color-gray-300);
-  font-family: Golos;
+  font-family: Golos Text VF;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -296,7 +296,7 @@ body {
 }
 .text-form a {
   color: var(--color-gray-300);
-  font-family: Golos;
+  font-family: Golos Text VF;
   font-size: 16px;
   font-style: normal;
   text-decoration: underline;
@@ -472,7 +472,7 @@ body {
 }
 .intro__col {
   display: flex;
-  /* max-width: 865px; */
+  max-width: 865px;
   margin: 0 auto;
   flex-direction: column;
   align-items: center;
@@ -653,7 +653,7 @@ body {
   padding: 4px 8px;
 }
 .tech .section__top {
-  margin-bottom: 38px;
+  margin-bottom: 52px;
 }
 .section__items {
   display: flex;
@@ -674,13 +674,18 @@ body {
   align-items: flex-start;
   flex: 1 0 0;
   align-self: stretch;
-  border-radius: var(--radius-sm, 4px);
+  border-radius: 8px;
   background: #fff;
   height: 279px;
 }
 .section__item-sm {
   max-width: 400px;
   flex: 1 0 1;
+}
+.section__item-bg {
+  background-image: url(./img/tech-bg.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
 }
 .section__item-text {
   font-size: 18px;
@@ -691,6 +696,9 @@ body {
   align-items: flex-start;
   gap: var(--spacing-2);
   align-self: stretch;
+}
+.tech-img {
+  background-color: #fff;
 }
 
 /* ----------------------aud-------------------------- */
@@ -718,6 +726,7 @@ body {
 
 @media only screen and (max-width: 500px) {
   .section__item {
+    min-width: initial;
     max-width: initial;
     height: 262px;
   }
@@ -729,6 +738,12 @@ body {
   }
   .aud {
     padding-bottom: 111px;
+  }
+  .section__item-bg {
+    background-image: url(./img/tech-bg.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 80% auto;
   }
 }
 /* -----------------form----------------- */
