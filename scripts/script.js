@@ -6,6 +6,27 @@ const formTitle = new SplitType(".form__title");
 gsap.registerPlugin(ScrollTrigger);
 // intro
 
+const delay = (n) => {
+  n = n || 2000;
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, n);
+  });
+};
+
+if (ScrollTrigger.isTouch === 1) {
+  ScrollTrigger.config({
+    autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
+  });
+  window.addEventListener("orientationchange", () => {
+    const promise1 = delay(100);
+    promise1.then(() => {
+      ScrollTrigger.refresh();
+    });
+  });
+}
+
 const timeline = gsap.timeline({ defaults: { duration: 0.5, ease: "ease" } });
 timeline
   .from(".intro__title .word", {
