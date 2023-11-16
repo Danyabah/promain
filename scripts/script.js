@@ -34,6 +34,7 @@ gsap.from(".tech__text", {
   ease: "ease",
   scrollTrigger: {
     trigger: ".tech__text",
+    toggleActions: "play none none reset",
   },
 });
 gsap.from(".tech__title .word", {
@@ -44,6 +45,7 @@ gsap.from(".tech__title .word", {
   ease: "ease",
   scrollTrigger: {
     trigger: ".tech__title",
+    toggleActions: "play none none reset",
   },
 });
 gsap.from(".tech__subtitle", {
@@ -54,6 +56,7 @@ gsap.from(".tech__subtitle", {
   opacity: 0,
   scrollTrigger: {
     trigger: ".tech__subtitle",
+    toggleActions: "play none none reset",
   },
 });
 gsap.from(".tech .section__item", {
@@ -65,6 +68,7 @@ gsap.from(".tech .section__item", {
   ease: "ease",
   scrollTrigger: {
     trigger: ".tech .section__row",
+    toggleActions: "play none none reset",
   },
 });
 // gsap.from(".tech__text", {
