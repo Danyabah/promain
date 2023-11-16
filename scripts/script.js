@@ -29,7 +29,9 @@ gsap.from(".tech__text", {
   opacity: 0,
   duration: 0.5,
   ease: "ease",
-  scrollTrigger: ".tech__text",
+  scrollTrigger: {
+    trigger: ".tech__text",
+  },
 });
 gsap.from(".tech__title .word", {
   y: "100%",
@@ -37,7 +39,9 @@ gsap.from(".tech__title .word", {
   stagger: 0.05,
   duration: 0.5,
   ease: "ease",
-  scrollTrigger: ".tech__title",
+  scrollTrigger: {
+    trigger: ".tech__title",
+  },
 });
 gsap.from(".tech__subtitle", {
   y: "100%",
@@ -45,7 +49,9 @@ gsap.from(".tech__subtitle", {
   delay: 0.5,
   ease: "ease",
   opacity: 0,
-  scrollTrigger: ".tech__subtitle",
+  scrollTrigger: {
+    trigger: ".tech__subtitle",
+  },
 });
 gsap.from(".tech .section__item", {
   y: "20%",
@@ -54,8 +60,42 @@ gsap.from(".tech .section__item", {
   delay: 0.5,
   duration: 0.5,
   ease: "ease",
-  scrollTrigger: ".tech .section__row",
+  scrollTrigger: {
+    trigger: ".tech .section__row",
+  },
 });
+// gsap.from(".tech__text", {
+//   y: "100%",
+//   opacity: 0,
+//   duration: 0.5,
+//   ease: "ease",
+//   scrollTrigger: ".tech__text",
+// });
+// gsap.from(".tech__title .word", {
+//   y: "100%",
+//   opacity: 0,
+//   stagger: 0.05,
+//   duration: 0.5,
+//   ease: "ease",
+//   scrollTrigger: ".tech__title",
+// });
+// gsap.from(".tech__subtitle", {
+//   y: "100%",
+//   duration: 0.5,
+//   delay: 0.5,
+//   ease: "ease",
+//   opacity: 0,
+//   scrollTrigger: ".tech__subtitle",
+// });
+// gsap.from(".tech .section__item", {
+//   y: "20%",
+//   opacity: 0,
+//   stagger: 0.2,
+//   delay: 0.5,
+//   duration: 0.5,
+//   ease: "ease",
+//   scrollTrigger: ".tech .section__row",
+// });
 // aud
 gsap.from(".aud__text", {
   y: "100%",
