@@ -489,6 +489,7 @@ body {
   background: #fff;
   padding: 16px;
 }
+
 .video__play {
   display: none;
   /* display: flex; */
@@ -526,6 +527,15 @@ body {
 
   padding: 0px 0px 56% 0px;
 }
+
+.video__poster {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 .video__item {
   object-fit: cover;
   position: absolute;
@@ -534,6 +544,7 @@ body {
   width: 100%;
   height: 100%;
 }
+
 .video__play-text {
   text-align: center;
   max-width: 479px;
@@ -552,6 +563,7 @@ body {
   left: -67px;
   z-index: -1;
 }
+
 .video__col::after {
   content: "";
   position: absolute;
@@ -700,7 +712,125 @@ body {
 .tech-img {
   background-color: #fff;
 }
-
+/* ----------------------popup -----------------------*/
+.popup__video-col {
+  border-radius: var(--radius-lg);
+  background: #ffffff1a;
+  padding: 16px;
+  width: 73%;
+  position: relative;
+}
+.popup__controllers {
+  position: absolute;
+  bottom: -35px;
+  width: 100%;
+  left: 0px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.popup__play {
+  cursor: pointer;
+}
+.popup__range-container {
+  width: 100%;
+}
+.popup__time {
+  color: var(--color-white-100, #fff);
+  font-family: Golos Text VF;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 130%; /* 18.2px */
+  letter-spacing: 1.68px;
+  text-transform: uppercase;
+}
+.popup__range {
+  width: 100%;
+  height: 10px;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid #8d9aa6;
+}
+.popup__range::-webkit-progress-bar {
+  border-radius: 10px;
+  background-color: #8d9aa6;
+}
+.popup__range::-webkit-progress-value {
+  border-radius: 10px;
+  background-color: #fff;
+}
+.popup {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: rgba(27, 38, 52, 0.8);
+  z-index: 1000;
+  left: 0;
+  top: 0;
+}
+.popup__video-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+  outline-width: 0;
+  border-radius: var(--radius-lg);
+}
+.popup__video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+  height: 0;
+  overflow: hidden;
+}
+.popup__pause {
+  cursor: pointer;
+}
+/* ---------------------- scope------------------------ */
+.scope {
+  padding-bottom: 260px;
+}
+.scope__body {
+  margin-top: 73px;
+  display: flex;
+  gap: 19px;
+}
+.scope__menu {
+  display: flex;
+  flex-direction: column;
+}
+.scope__item {
+  padding: var(--spacing-2) var(--spacing-3);
+  width: 263px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  color: var(--color-gray-300);
+  font-family: Golos Text VF;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 130%; /* 26px */
+  letter-spacing: 0.2px;
+  transition: all 0.3s ease 0s;
+}
+.scope__item:hover {
+  background: #fff;
+}
+.scope__item-active {
+  background: var(--color-brand-cyan);
+  color: var(--color-gray-100);
+}
+.scope__item-active:hover {
+  background: var(--color-brand-cyan);
+}
+.scope__example {
+  border-radius: var(--radius-md);
+  background: #fff;
+  width: 100%;
+}
 /* ----------------------aud-------------------------- */
 .aud {
   padding-bottom: 216px;
@@ -900,4 +1030,7 @@ body {
   .section__item-text {
     font-size: 14px;
   }
+}
+.hidden {
+  display: none;
 }

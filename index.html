@@ -60,14 +60,11 @@
           <div class="container">
             <div class="video__col">
               <div class="video__container">
-                <video
-                  poster="./img/video-poster.jpg"
-                  class="video__item"
-                  preload="metadata"
-                  controls
-                >
-                  <source type="video/mp4" src="./img/forest.mp4" />
-                </video>
+                <img
+                  class="video__poster"
+                  src="./img/video-poster.jpg"
+                  alt=""
+                />
               </div>
               <div class="video__play active">
                 <img
@@ -168,6 +165,38 @@
           </div>
         </div>
       </section>
+      <section class="scope">
+        <div class="container">
+          <div class="section__top">
+            <div class="section__vec">
+              <img src="./img/Vecleft.svg" alt="" />
+              <h4 class="text-up section__text scope__text">возможности</h4>
+              <img src="./img/Vecright.svg" alt="" />
+            </div>
+
+            <h2 class="title-b section__title scope__title">
+              Промайн способен на многое
+            </h2>
+            <h3 class="text-gr section__subtitle scope__subtitle">
+              Помогает бизнесу оптимизировать процессы, экономить время и
+              увеличивать прибыль
+            </h3>
+          </div>
+          <div class="scope__body">
+            <ul class="scope__menu">
+              <li class="scope__item scope__item-active">Индикаторы риска</li>
+              <li class="scope__item">Дашборды</li>
+              <li class="scope__item">Непрерывный мониторинг</li>
+              <li class="scope__item">Интерактивная карта процессов</li>
+              <li class="scope__item">Root Cause</li>
+              <li class="scope__item">Симуляция</li>
+              <li class="scope__item">Benchmark</li>
+              <li class="scope__item">Диаграмма вариантов</li>
+            </ul>
+            <div class="scope__example"></div>
+          </div>
+        </div>
+      </section>
       <section class="aud" id="aud">
         <div class="container">
           <div class="section__top">
@@ -189,7 +218,7 @@
             <div class="section__row">
               <div class="section__item">
                 <img
-                  src="./img/check.svg"
+                  src="./img/graph.svg"
                   alt=""
                   class="section__item-img aud-img"
                 />
@@ -207,7 +236,7 @@
               </div>
               <div class="section__item section__item-sm">
                 <img
-                  src="./img/check.svg"
+                  src="./img/dash.svg"
                   alt=""
                   class="section__item-img aud-img"
                 />
@@ -226,7 +255,7 @@
             <div class="section__row">
               <div class="section__item section__item-sm">
                 <img
-                  src="./img/check.svg"
+                  src="./img/stack.svg"
                   alt=""
                   class="section__item-img aud-img"
                 />
@@ -243,7 +272,7 @@
               </div>
               <div class="section__item">
                 <img
-                  src="./img/check.svg"
+                  src="./img/process-people.svg"
                   alt=""
                   class="section__item-img aud-img"
                 />
@@ -297,6 +326,24 @@
           </form>
         </div>
       </section>
+      <div class="popup hidden">
+        <div class="popup__video-col">
+          <div class="popup__video-container">
+            <video class="popup__video-item" preload="metadata">
+              <source type="video/webm" src="./img/VEED Edit.webm" />
+            </video>
+          </div>
+          <div class="popup__controllers">
+            <img src="./img/play.svg" alt="" class="popup__play" />
+            <img src="./img/play.svg" alt="" class="popup__pause hidden" />
+
+            <div class="popup__range-container">
+              <progress max="100" value="0" class="popup__range"></progress>
+            </div>
+            <div class="popup__time">02:42</div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="container">
@@ -308,9 +355,7 @@
           <a href="" class="text-s footer__link">Патент</a>
           <span class="text-s footer__link">·</span>
           <a href="" class="text-s footer__link">Инструкция</a>
-          <a href="" class="text-s footer__link">+7 (812) 448-24-01</a>
-          <span class="text-s footer__link">·</span>
-          <a href="" class="text-s footer__link">pr@gazprom-neft.ru</a>
+          <a href="" class="text-s footer__link">gpn_promine@gazprom-neft.ru</a>
         </div>
       </div>
     </footer>
