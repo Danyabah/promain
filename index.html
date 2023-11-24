@@ -31,7 +31,10 @@
           <span class="header__en header__active">EN</span>
           <span class="header__ru">RU</span>
         </div>
-        <a class="btn btn-s" href="#form">Заказать демо</a>
+        <a class="btn btn-s" href="#form">Запросить демо</a>
+      </div>
+      <div class="burger">
+        <img src="./img/burger.svg" alt="" />
       </div>
     </header>
     <main class="main">
@@ -43,35 +46,51 @@
               <h3 class="text-up">Включен в Реестр российского ПО</h3>
             </div>
             <h1 class="title-h intro__title">
-              Находите <br class="m-v" />
-              точки <br class="m-h" />
-              роста <br class="m-v" />
-              в глубине <br class="m-v" />процессов
+              Находите точки <br class="m-h" />
+              роста с Промайном
             </h1>
             <p class="text-b intro__text">
-              Находите точки роста в бизнес-процессах и снижайте риски с
-              технологией <br class="m-h" />
-              Process Mining
+              Снижайте риски и повышайте производительность труда с технологией
+              <br class="m-h" />
+              process mining
             </p>
-            <a class="btn intro__btn" href="#form">Заказать демо</a>
+            <a class="btn intro__btn" href="#form">Запросить демо</a>
           </div>
         </div>
         <div class="video" id="about">
           <div class="container">
             <div class="video__col">
               <div class="video__container">
-                <img
+                <video
                   class="video__poster"
-                  src="./img/video-poster.jpg"
-                  alt=""
-                />
+                  preload="metadata"
+                  autoplay="autoplay"
+                  loop="loop"
+                  muted="muted"
+                  playsinline="playsinline"
+                >
+                  <source type="video/webm" src="./img/VEED Edit.webm" />
+                </video>
               </div>
               <div class="video__play active">
-                <img
+                <!-- <img
                   src="./img/video-play.svg"
                   class="video__play-img"
                   alt=""
-                />
+                /> -->
+                <svg
+                  class="video__play-img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="80"
+                  height="80"
+                  viewBox="0 0 80 80"
+                  fill="none"
+                >
+                  <path
+                    d="M71.9311 36.1769C74.5978 37.7165 74.5978 41.5655 71.9312 43.1051L23.9311 70.8179C21.2645 72.3575 17.9311 70.433 17.9311 67.3538L17.9312 11.9282C17.9312 8.84901 21.2645 6.9245 23.9312 8.4641L71.9311 36.1769Z"
+                    fill="#0647D1"
+                  />
+                </svg>
                 <p class="video__play-text text-n">
                   За две минуты рассказываем, как Промайн экономит бизнесу
                   деньги и разгружает сотрудников
@@ -123,10 +142,11 @@
                   class="section__item-img tech-img"
                 />
                 <div class="section__item-info">
-                  <h3 class="title-n section__item-title">Аналитика</h3>
+                  <h3 class="title-n section__item-title">Визуализация</h3>
                   <h4 class="text-gr section__item-text">
-                    Инструменты Промайн подсвечивают узкие места процесса и
-                    помогают найти области для повышения эффективности
+                    Промайн автоматически визуализирует цифровую копию процесса
+                    в формате интерактивной карты со всеми вариантами его
+                    выполнения
                   </h4>
                 </div>
               </div>
@@ -139,11 +159,10 @@
                   class="section__item-img tech-img"
                 />
                 <div class="section__item-info">
-                  <h3 class="title-n section__item-title">Визуализация</h3>
+                  <h3 class="title-n section__item-title">Аналитика</h3>
                   <h4 class="text-gr section__item-text">
-                    Промайн автоматически визуализирует цифровую копию процесса
-                    в формате интерактивной карты со всеми вариантами его
-                    выполнения
+                    Инструменты Промайн подсвечивают узкие места процесса и
+                    помогают найти области для повышения эффективности
                   </h4>
                 </div>
               </div>
@@ -165,7 +184,7 @@
           </div>
         </div>
       </section>
-      <section class="scope">
+      <section class="scope" id="advantage">
         <div class="container">
           <div class="section__top">
             <div class="section__vec">
@@ -186,8 +205,8 @@
             <ul class="scope__menu">
               <li class="scope__item scope__item-active">Индикаторы риска</li>
               <li class="scope__item">Дашборды</li>
-              <li class="scope__item">Непрерывный мониторинг</li>
-              <li class="scope__item">Интерактивная карта процессов</li>
+              <li class="scope__item">Мониторинг</li>
+              <li class="scope__item">Интерактивная карта</li>
               <li class="scope__item">Root Cause</li>
               <li class="scope__item">Симуляция</li>
               <li class="scope__item">Benchmark</li>
@@ -291,6 +310,62 @@
           </div>
         </div>
       </section>
+      <section class="news">
+        <div class="container">
+          <div class="section__top">
+            <div class="section__vec">
+              <img src="./img/Vecleft.svg" alt="" />
+              <h4 class="text-up section__text news__text">Новости</h4>
+              <img src="./img/Vecright.svg" alt="" />
+            </div>
+
+            <h2 class="title-b section__title news__title">
+              Пишем о том, в чем разбираемся
+            </h2>
+            <h3 class="text-gr section__subtitle news__subtitle">
+              Исследуйте вселенную process mining вместе с командой Промайн
+            </h3>
+          </div>
+          <div class="news__body">
+            <div class="news__item">
+              <img class="news__img" src="./img/news.jpg" />
+              <div class="news__info">
+                <p class="news__time">25-26 июля 2023</p>
+                <h3 class="news__name">
+                  Промайн успешно прошел проверку на уязвимость и
+                  импортонезависимость
+                </h3>
+                <a href="" class="news__link">Читать полностью</a>
+              </div>
+            </div>
+            <div class="news__item">
+              <img class="news__img" src="./img/news.jpg" />
+              <div class="news__info">
+                <p class="news__time">25-26 июля 2023</p>
+                <h3 class="news__name">
+                  Промайн успешно прошел проверку на уязвимость и
+                  импортонезависимость
+                </h3>
+                <a href="" class="news__link">Читать полностью</a>
+              </div>
+            </div>
+            <div class="news__item">
+              <img class="news__img" src="./img/news.jpg" />
+              <div class="news__info">
+                <p class="news__time">25-26 июля 2023</p>
+                <h3 class="news__name">
+                  Промайн успешно прошел проверку на уязвимость и
+                  импортонезависимость
+                </h3>
+                <a href="" class="news__link">Читать полностью</a>
+              </div>
+            </div>
+          </div>
+          <div class="news__bottom">
+            <a href="" class="btn news__btn">Смотреть все новости</a>
+          </div>
+        </div>
+      </section>
       <section class="form" id="form">
         <div class="container">
           <div class="section__top">
@@ -321,7 +396,7 @@
                 Заполняя форму, я принимаю
                 <a href=""> условия передачи информации</a>
               </p>
-              <button class="btn" type="submit">Заказать демо</button>
+              <button class="btn" type="submit">Запросить демо</button>
             </div>
           </form>
         </div>
@@ -330,7 +405,7 @@
         <div class="popup__video-col">
           <div class="popup__video-container">
             <video class="popup__video-item" preload="metadata">
-              <source type="video/webm" src="./img/VEED Edit.webm" />
+              <source type="video/webm" src="./img/Gazprom Promine.mp4" />
             </video>
           </div>
           <div class="popup__controllers">

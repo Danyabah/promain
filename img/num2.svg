@@ -1,9 +1,5 @@
-<svg width="13" height="21" viewBox="0 0 13 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Group 9">
-<rect id="Rectangle 9" width="8.14371" height="4.07186" fill="#C3CFD9"/>
-<rect id="Rectangle 12" x="4.07202" y="8.14368" width="4.07186" height="4.07186" fill="#C3CFD9"/>
-<rect id="Rectangle 13" width="4.07186" height="6.10778" transform="matrix(1 0 0 -1 0 18.3234)" fill="#C3CFD9"/>
-<rect id="Rectangle 11" y="16.2875" width="12.2156" height="4.07186" fill="#C3CFD9"/>
-<rect id="Rectangle 10" x="8.14355" y="4.07178" width="4.07186" height="8.14371" fill="#C3CFD9"/>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="two">
+<path id="Union" fill-rule="evenodd" clip-rule="evenodd" d="M6 2H14V6H6V2ZM14 10V6H18V10H14ZM10 14V10H14V14H10ZM10 18V14H6V18V22H18V18H10Z" fill="#2FD7D4"/>
 </g>
 </svg>

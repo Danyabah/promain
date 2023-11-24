@@ -3,6 +3,7 @@ const techTitle = new SplitType(".tech__title");
 const audTitle = new SplitType(".aud__title");
 const formTitle = new SplitType(".form__title");
 const scopTitle = new SplitType(".scope__title");
+const newsTitle = new SplitType(".news__title");
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -118,6 +119,39 @@ gsap.from(".aud .section__item", {
   ease: "ease",
   scrollTrigger: ".aud .section__row",
 });
+
+//news
+gsap.from(".news__text", {
+  y: "100%",
+  opacity: 0,
+  duration: 0.5,
+  ease: "ease",
+  scrollTrigger: ".news__text",
+});
+gsap.from(".news__title .word", {
+  y: "100%",
+  opacity: 0,
+  stagger: 0.05,
+  duration: 0.5,
+  ease: "ease",
+  scrollTrigger: ".news__title",
+});
+gsap.from(".news__subtitle", {
+  y: "100%",
+  duration: 0.5,
+  delay: 0.5,
+  ease: "ease",
+  opacity: 0,
+  scrollTrigger: ".news__subtitle",
+});
+gsap.from(".news .section__item", {
+  y: "20%",
+  opacity: 0,
+  stagger: 0.2,
+  duration: 0.5,
+  ease: "ease",
+  scrollTrigger: ".news .section__row",
+});
 // form
 
 gsap.from(".form__text", {
@@ -166,7 +200,7 @@ gsap.to(".form .inp", {
 
 const videoPlay = document.querySelector(".video__play");
 const videoPlayBtn = document.querySelector(".video__play-img");
-const videoPoster = document.querySelector(".video__poster");
+
 const popup = document.querySelector(".popup");
 
 popup.addEventListener("click", (event) => {
@@ -232,6 +266,8 @@ const popupPlay = document.querySelector(".popup__play");
 const popupPause = document.querySelector(".popup__pause");
 const popupVideo = document.querySelector(".popup__video-item");
 const progress = document.querySelector(".popup__range");
+const videoPoster = document.querySelector(".video__poster");
+const videoHover = document.querySelector(".video__play ");
 
 const time = document.querySelector(".popup__time");
 
@@ -282,3 +318,49 @@ function sToStr(s) {
   s = (s % 60) + "";
   return m.padStart(2, 0) + ":" + s.padStart(2, 0);
 }
+
+videoHover.addEventListener("mouseenter", () => {
+  console.log("fff");
+  videoPoster.pause();
+});
+
+videoHover.addEventListener("mouseleave", () => {
+  console.log("fff");
+  videoPoster.play();
+});
+
+// burger
+const burger = document.querySelector(".burger");
+const header = document.querySelector(".header");
+
+burger.onclick = function () {
+  if (burger.classList.contains("burger-active")) {
+    burger.classList.remove("burger-active");
+    header.classList.remove("header-active");
+    gsap.to(".header__nav", {
+      duration: 0.6,
+      ease: "ease",
+      height: "0px",
+    });
+    gsap.to(".header__right", {
+      duration: 0.6,
+      ease: "ease",
+      height: "0px",
+      delay: 0.1,
+    });
+  } else {
+    burger.classList.add("burger-active");
+    header.classList.add("header-active");
+    gsap.to(".header__nav", {
+      duration: 0.6,
+      ease: "ease",
+      height: "173px",
+    });
+    gsap.to(".header__right", {
+      duration: 0.6,
+      ease: "ease",
+      height: "98px",
+      delay: 0.1,
+    });
+  }
+};
