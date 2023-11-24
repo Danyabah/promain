@@ -522,7 +522,7 @@ body {
   margin: 0 auto;
 }
 .intro__title {
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 .intro__col {
   display: flex;
