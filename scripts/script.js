@@ -144,14 +144,7 @@ gsap.from(".news__subtitle", {
   opacity: 0,
   scrollTrigger: ".news__subtitle",
 });
-gsap.from(".news .section__item", {
-  y: "20%",
-  opacity: 0,
-  stagger: 0.2,
-  duration: 0.5,
-  ease: "ease",
-  scrollTrigger: ".news .section__row",
-});
+
 // form
 
 gsap.from(".form__text", {
