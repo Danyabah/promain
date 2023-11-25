@@ -7,21 +7,12 @@ gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.config({
   ignoreMobileResize: true,
 });
+
+const burgerLinks = document.querySelectorAll(".header__link");
+
 burger.onclick = function () {
   if (burger.classList.contains("burger-active")) {
-    burger.classList.remove("burger-active");
-    header.classList.remove("header-active");
-    gsap.to(".header__nav", {
-      duration: 0.6,
-      ease: "ease",
-      height: "0px",
-    });
-    gsap.to(".header__right", {
-      duration: 0.6,
-      ease: "ease",
-      height: "0px",
-      delay: 0.1,
-    });
+    burgerClose();
   } else {
     burger.classList.add("burger-active");
     header.classList.add("header-active");
@@ -39,6 +30,25 @@ burger.onclick = function () {
   }
 };
 
+burgerLinks.forEach((link) => {
+  link.onclick = burgerClose;
+});
+
+function burgerClose() {
+  burger.classList.remove("burger-active");
+  header.classList.remove("header-active");
+  gsap.to(".header__nav", {
+    duration: 0.6,
+    ease: "ease",
+    height: "0px",
+  });
+  gsap.to(".header__right", {
+    duration: 0.6,
+    ease: "ease",
+    height: "0px",
+    delay: 0.1,
+  });
+}
 // form
 
 gsap.from(".form__text", {

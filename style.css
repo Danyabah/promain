@@ -143,19 +143,19 @@ h6 {
 }
 /* ------------------------------------ */
 @font-face {
-  font-family: "Golos Text VF";
+  font-family: "Golos";
   src: url("./fonts/GolosText-Bold.woff2") format("woff2");
   font-weight: 700;
 }
 
 @font-face {
-  font-family: "Golos Text VF";
+  font-family: "Golos";
   src: url("./fonts/GolosText-Medium.woff2") format("woff2");
   font-weight: 500;
 }
 
 @font-face {
-  font-family: "Golos Text VF";
+  font-family: "Golos";
   src: url("./fonts/GolosText-DemiBold.woff2") format("woff2");
   font-weight: 600;
 }
@@ -206,7 +206,7 @@ body {
   /* font-size: 96px; */
   font-size: clamp(2rem, 5vw + 1rem, 10rem);
   font-style: normal;
-  font-family: Golos Text VF;
+  font-family: Golos;
   font-weight: 700;
   line-height: 95%; /* 91.2px */
   letter-spacing: -0.05em;
@@ -217,14 +217,14 @@ body {
   /* font-size: 50px; */
   font-size: clamp(2rem, 2vw + 1rem, 6rem);
   font-style: normal;
-  font-family: Golos Text VF;
+  font-family: Golos;
   font-weight: 700;
   line-height: 100%;
   letter-spacing: -1.25px;
 }
 .title-n {
   color: var(--color-gray-800);
-  font-family: Golos Text VF;
+  font-family: Golos;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -237,11 +237,11 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: 120%; /* 28.8px */
-  font-family: Golos Text VF;
+  font-family: Golos;
 }
 .text-b {
   color: var(--color-gray-800);
-  font-family: Golos Text VF;
+  font-family: Golos;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -250,7 +250,7 @@ body {
 }
 .text-n {
   color: var(--color-gray-400);
-  font-family: Golos Text VF;
+  font-family: Golos;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -259,7 +259,7 @@ body {
 }
 .text-s {
   color: var(--color-gray-400);
-  font-family: Golos Text VF;
+  font-family: Golos;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -278,7 +278,7 @@ body {
 }
 .text-gr {
   color: var(--color-gray-600);
-  font-family: Golos Text VF;
+  font-family: Golos;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -287,7 +287,7 @@ body {
 }
 .text-form {
   color: var(--color-gray-300);
-  font-family: Golos Text VF;
+  font-family: Golos;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -296,7 +296,7 @@ body {
 }
 .text-form a {
   color: var(--color-gray-300);
-  font-family: Golos Text VF;
+  font-family: Golos;
   font-size: 16px;
   font-style: normal;
   text-decoration: underline;
@@ -428,7 +428,7 @@ body {
 }
 .header__link {
   color: var(--color-gray-800);
-  font-family: Golos Text VF;
+  font-family: Golos;
   font-size: 16px;
   font-weight: 400;
   line-height: 130%; /* 20.8px */
@@ -463,7 +463,7 @@ body {
 .header__ru,
 .header__en {
   color: var(--color-gray-300);
-  font-family: Golos Text VF;
+  font-family: Golos;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -828,7 +828,7 @@ body {
 }
 .popup__time {
   color: var(--color-white-100, #fff);
-  font-family: Golos Text VF;
+  font-family: Golos;
   font-size: 14px;
   font-weight: 500;
   line-height: 130%; /* 18.2px */
@@ -1151,7 +1151,7 @@ body {
 .news__name {
   color: var(--color-gray-800);
   margin-top: 8px;
-  font-family: Golos Text VF;
+  font-family: Golos;
   font-size: 24px;
   font-weight: 500;
   line-height: 110%; /* 26.4px */
