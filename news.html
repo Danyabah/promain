@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Промайн</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./news.css" />
+    <link type="image/svg+xml" href="./img/avatar.svg" rel="shortcut icon" />
+    <link type="image/svg+xml" href="./img/avatar.svg" rel="icon" />
+    <script src="./libs/split-type/umd/index.min.js"></script>
+    <script
+      src="./libs/gsap-public/minified/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="./libs/gsap-public/minified/gsap.min.js" defer></script>
+    <script src="./scripts/news.js" type="module" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__left">
+        <a href="./index.html" class="header__logo">
+          <img src="./img/logo.svg" alt="" />
+        </a>
+        <nav class="header__nav">
+          <a href="./index.html#about" class="header__link">О продукте</a>
+          <a href="./index.html#tech" class="header__link">Технология</a>
+          <a href="./index.html#advantage" class="header__link">Преимущества</a>
+          <a href="./index.html#aud" class="header__link">Аудитория</a>
+        </nav>
+      </div>
+      <div class="header__right">
+        <div class="header__switch">
+          <span class="header__en header__active">EN</span>
+          <span class="header__ru">RU</span>
+        </div>
+        <a class="btn btn-s" href="./index.html#form">Запросить демо</a>
+      </div>
+      <div class="burger">
+        <img src="./img/burger.svg" alt="" />
+      </div>
+    </header>
+    <main class="main">
+      <section class="news main__news">
+        <div class="container">
+          <div class="section__top">
+            <div class="section__vec">
+              <img src="./img/Vecleft.svg" alt="" />
+              <h4 class="text-up section__text news__text">Новости</h4>
+              <img src="./img/Vecright.svg" alt="" />
+            </div>
+
+            <h2 class="title-b section__title news__title">
+              Пишем о том, в чем разбираемся
+            </h2>
+            <h3 class="text-gr section__subtitle news__subtitle">
+              Исследуйте вселенную process mining вместе с командой Промайн
+            </h3>
+          </div>
+          <div class="news__body main__body">
+            <div class="news__item">
+              <img class="news__img" src="./img/news.jpg" />
+              <div class="news__info">
+                <p class="news__time">25-26 июля 2023</p>
+                <h3 class="news__name">
+                  Промайн успешно прошел проверку на уязвимость и
+                  импортонезависимость
+                </h3>
+                <a href="./newspage.html" class="news__link"
+                  >Читать полностью</a
+                >
+              </div>
+            </div>
+            <div class="news__item">
+              <img class="news__img" src="./img/news.jpg" />
+              <div class="news__info">
+                <p class="news__time">25-26 июля 2023</p>
+                <h3 class="news__name">
+                  Промайн успешно прошел проверку на уязвимость и
+                  импортонезависимость
+                </h3>
+                <a href="./newspage.html" class="news__link"
+                  >Читать полностью</a
+                >
+              </div>
+            </div>
+            <div class="news__item">
+              <img class="news__img" src="./img/news.jpg" />
+              <div class="news__info">
+                <p class="news__time">25-26 июля 2023</p>
+                <h3 class="news__name">
+                  Промайн успешно прошел проверку на уязвимость и
+                  импортонезависимость
+                </h3>
+                <a href="./newspage.html" class="news__link"
+                  >Читать полностью</a
+                >
+              </div>
+            </div>
+            <div class="news__item">
+              <img class="news__img" src="./img/news.jpg" />
+              <div class="news__info">
+                <p class="news__time">25-26 июля 2023</p>
+                <h3 class="news__name">
+                  Промайн успешно прошел проверку на уязвимость и
+                  импортонезависимость
+                </h3>
+                <a href="./newspage.html" class="news__link"
+                  >Читать полностью</a
+                >
+              </div>
+            </div>
+            <div class="news__item">
+              <img class="news__img" src="./img/news.jpg" />
+              <div class="news__info">
+                <p class="news__time">25-26 июля 2023</p>
+                <h3 class="news__name">
+                  Промайн успешно прошел проверку на уязвимость и
+                  импортонезависимость
+                </h3>
+                <a href="./newspage.html" class="news__link"
+                  >Читать полностью</a
+                >
+              </div>
+            </div>
+            <div class="news__item">
+              <img class="news__img" src="./img/news.jpg" />
+              <div class="news__info">
+                <p class="news__time">25-26 июля 2023</p>
+                <h3 class="news__name">
+                  Промайн успешно прошел проверку на уязвимость и
+                  импортонезависимость
+                </h3>
+                <a href="./newspage.html" class="news__link"
+                  >Читать полностью</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="news__pagination">
+            <div class="news__page news__page-active">1</div>
+            <div class="news__page">2</div>
+            <div class="news__page">3</div>
+            <div class="news__page">4</div>
+            <div class="news__page news__page-separator">—</div>
+            <div class="news__page">10</div>
+            <button class="news__page btn-next-page">Следующая</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__body">
+          <a href="" class="text-s footer__link">Политика конфиденциальности</a>
+          <span class="text-s footer__link">·</span>
+          <a href="" class="text-s footer__link">Документы</a>
+          <span class="text-s footer__link">·</span>
+          <a href="" class="text-s footer__link">Патент</a>
+          <span class="text-s footer__link">·</span>
+          <a href="" class="text-s footer__link">Инструкция</a>
+          <a href="" class="text-s footer__link">gpn_promine@gazprom-neft.ru</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

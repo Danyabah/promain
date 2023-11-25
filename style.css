@@ -1071,10 +1071,11 @@ body {
   bottom: 0;
   z-index: -1;
 }
+
 @media only screen and (max-width: 500px) {
   .form__item {
     padding: 0px 16px;
-    margin-top: 105px;
+    margin-top: 32px;
   }
   .form__bottom {
     flex-direction: column-reverse;
@@ -1133,6 +1134,9 @@ body {
 }
 .news__info {
   padding: 24px;
+}
+.news__img {
+  width: 100%;
 }
 .news__time {
   color: var(--color-gray-300);
