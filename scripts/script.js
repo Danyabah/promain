@@ -199,176 +199,176 @@ timeline
 // });
 // });
 
-const videoPlay = document.querySelector(".video__play");
-const videoPlayBtn = document.querySelector(".video__play-img");
+// const videoPlay = document.querySelector(".video__play");
+// const videoPlayBtn = document.querySelector(".video__play-img");
 
-const popup = document.querySelector(".popup");
+// const popup = document.querySelector(".popup");
 
-popup.addEventListener("click", (event) => {
-  if (event.target === popup) {
-    // gsap.to(".popup", {
-    //   opacity: 0,
-    //   duration: 0.5,
-    // });
-    // gsap.to(".popup__video-col", {
-    //   y: "-100%",
-    //   duration: 0.5,
-    // });
-    // setTimeout(() => {
-    popup.classList.add("hidden");
-    // }, 500);
-    showPreview();
-    pause();
-  }
-});
+// popup.addEventListener("click", (event) => {
+//   if (event.target === popup) {
+//     // gsap.to(".popup", {
+//     //   opacity: 0,
+//     //   duration: 0.5,
+//     // });
+//     // gsap.to(".popup__video-col", {
+//     //   y: "-100%",
+//     //   duration: 0.5,
+//     // });
+//     // setTimeout(() => {
+//     popup.classList.add("hidden");
+//     // }, 500);
+//     showPreview();
+//     pause();
+//   }
+// });
 
-function showPreview() {
-  videoPoster.classList.remove("hidden");
-  videoPlay.classList.add("active");
-}
+// function showPreview() {
+//   videoPoster.classList.remove("hidden");
+//   videoPlay.classList.add("active");
+// }
 
-function hidePreview() {
-  videoPoster.classList.add("hidden");
-  videoPlay.classList.remove("active");
-}
+// function hidePreview() {
+//   videoPoster.classList.add("hidden");
+//   videoPlay.classList.remove("active");
+// }
 
-videoPlayBtn.addEventListener("click", (e) => {
-  popup.classList.remove("hidden");
-  gsap.from(".popup", {
-    opacity: 0,
-    duration: 0.5,
-  });
-  gsap.from(".popup__video-col", {
-    y: "-100%",
-    duration: 0.5,
-  });
-  hidePreview();
-  play();
-});
+// videoPlayBtn.addEventListener("click", (e) => {
+//   popup.classList.remove("hidden");
+//   gsap.from(".popup", {
+//     opacity: 0,
+//     duration: 0.5,
+//   });
+//   gsap.from(".popup__video-col", {
+//     y: "-100%",
+//     duration: 0.5,
+//   });
+//   hidePreview();
+//   play();
+// });
 
-const scopeItems = document.querySelectorAll(".scope__item");
+// const scopeItems = document.querySelectorAll(".scope__item");
 
-scopeItems.forEach((item) => {
-  item.onclick = function () {
-    clearScopeClass();
-    item.classList.add("scope__item-active");
-  };
-});
+// scopeItems.forEach((item) => {
+//   item.onclick = function () {
+//     clearScopeClass();
+//     item.classList.add("scope__item-active");
+//   };
+// });
 
-function clearScopeClass() {
-  scopeItems.forEach((item) => {
-    item.classList.remove("scope__item-active");
-  });
-}
+// function clearScopeClass() {
+//   scopeItems.forEach((item) => {
+//     item.classList.remove("scope__item-active");
+//   });
+// }
 
-// video
+// // video
 
-const popupPlay = document.querySelector(".popup__play");
-const popupPause = document.querySelector(".popup__pause");
-const popupVideo = document.querySelector(".popup__video-item");
-const progress = document.querySelector(".popup__range");
-const videoPoster = document.querySelector(".video__poster");
-const videoHover = document.querySelector(".video__play ");
+// const popupPlay = document.querySelector(".popup__play");
+// const popupPause = document.querySelector(".popup__pause");
+// const popupVideo = document.querySelector(".popup__video-item");
+// const progress = document.querySelector(".popup__range");
+// const videoPoster = document.querySelector(".video__poster");
+// const videoHover = document.querySelector(".video__play ");
 
-const time = document.querySelector(".popup__time");
+// const time = document.querySelector(".popup__time");
 
-time.innerHTML = sToStr(+popupVideo.duration);
+// time.innerHTML = sToStr(+popupVideo.duration);
 
-popupPlay.onclick = play;
+// popupPlay.onclick = play;
 
-popupPause.onclick = pause;
+// popupPause.onclick = pause;
 
-popupVideo.ontimeupdate = progressUpdate;
+// popupVideo.ontimeupdate = progressUpdate;
 
-progress.onclick = videoRewind;
+// progress.onclick = videoRewind;
 
-function play() {
-  popupVideo.play();
-  popupPause.classList.remove("hidden");
-  popupPlay.classList.add("hidden");
-}
+// function play() {
+//   popupVideo.play();
+//   popupPause.classList.remove("hidden");
+//   popupPlay.classList.add("hidden");
+// }
 
-function pause() {
-  popupVideo.pause();
-  popupPause.classList.add("hidden");
-  popupPlay.classList.remove("hidden");
-}
+// function pause() {
+//   popupVideo.pause();
+//   popupPause.classList.add("hidden");
+//   popupPlay.classList.remove("hidden");
+// }
 
-function progressUpdate() {
-  let d = popupVideo.duration;
-  let c = popupVideo.currentTime;
-  progress.value = (100 * c) / d;
+// function progressUpdate() {
+//   let d = popupVideo.duration;
+//   let c = popupVideo.currentTime;
+//   progress.value = (100 * c) / d;
 
-  time.innerHTML = sToStr(
-    Math.round(+popupVideo.duration - +popupVideo.currentTime)
-  );
-}
+//   time.innerHTML = sToStr(
+//     Math.round(+popupVideo.duration - +popupVideo.currentTime)
+//   );
+// }
 
-function videoRewind(event) {
-  let w = this.offsetWidth;
-  let o = event.offsetX;
+// function videoRewind(event) {
+//   let w = this.offsetWidth;
+//   let o = event.offsetX;
 
-  this.value = (100 * o) / w;
-  pause();
-  popupVideo.currentTime = popupVideo.duration * (o / w);
-  play();
-}
+//   this.value = (100 * o) / w;
+//   pause();
+//   popupVideo.currentTime = popupVideo.duration * (o / w);
+//   play();
+// }
 
-function sToStr(s) {
-  let m = Math.trunc(s / 60) + "";
-  s = (s % 60) + "";
-  return m.padStart(2, 0) + ":" + s.padStart(2, 0);
-}
+// function sToStr(s) {
+//   let m = Math.trunc(s / 60) + "";
+//   s = (s % 60) + "";
+//   return m.padStart(2, 0) + ":" + s.padStart(2, 0);
+// }
 
-videoHover.addEventListener("mouseenter", () => {
-  videoPoster.pause();
-});
+// videoHover.addEventListener("mouseenter", () => {
+//   videoPoster.pause();
+// });
 
-videoHover.addEventListener("mouseleave", () => {
-  videoPoster.play();
-});
+// videoHover.addEventListener("mouseleave", () => {
+//   videoPoster.play();
+// });
 
-// burger
-const burger = document.querySelector(".burger");
-const header = document.querySelector(".header");
-const burgerLinks = document.querySelectorAll(".header__link");
+// // burger
+// const burger = document.querySelector(".burger");
+// const header = document.querySelector(".header");
+// const burgerLinks = document.querySelectorAll(".header__link");
 
-burger.onclick = function () {
-  if (burger.classList.contains("burger-active")) {
-    burgerClose();
-  } else {
-    burger.classList.add("burger-active");
-    header.classList.add("header-active");
-    gsap.to(".header__nav", {
-      duration: 0.6,
-      ease: "ease",
-      height: "173px",
-    });
-    gsap.to(".header__right", {
-      duration: 0.6,
-      ease: "ease",
-      height: "98px",
-      delay: 0.1,
-    });
-  }
-};
+// burger.onclick = function () {
+//   if (burger.classList.contains("burger-active")) {
+//     burgerClose();
+//   } else {
+//     burger.classList.add("burger-active");
+//     header.classList.add("header-active");
+//     gsap.to(".header__nav", {
+//       duration: 0.6,
+//       ease: "ease",
+//       height: "173px",
+//     });
+//     gsap.to(".header__right", {
+//       duration: 0.6,
+//       ease: "ease",
+//       height: "98px",
+//       delay: 0.1,
+//     });
+//   }
+// };
 
-burgerLinks.forEach((link) => {
-  link.onclick = burgerClose;
-});
+// burgerLinks.forEach((link) => {
+//   link.onclick = burgerClose;
+// });
 
-function burgerClose() {
-  burger.classList.remove("burger-active");
-  header.classList.remove("header-active");
-  gsap.to(".header__nav", {
-    duration: 0.6,
-    ease: "ease",
-    height: "0px",
-  });
-  gsap.to(".header__right", {
-    duration: 0.6,
-    ease: "ease",
-    height: "0px",
-    delay: 0.1,
-  });
-}
+// function burgerClose() {
+//   burger.classList.remove("burger-active");
+//   header.classList.remove("header-active");
+//   gsap.to(".header__nav", {
+//     duration: 0.6,
+//     ease: "ease",
+//     height: "0px",
+//   });
+//   gsap.to(".header__right", {
+//     duration: 0.6,
+//     ease: "ease",
+//     height: "0px",
+//     delay: 0.1,
+//   });
+// }
