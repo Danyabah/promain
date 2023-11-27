@@ -4,59 +4,58 @@ const audTitle = new SplitType(".aud__title");
 const formTitle = new SplitType(".form__title");
 const scopTitle = new SplitType(".scope__title");
 const newsTitle = new SplitType(".news__title");
-
 gsap.registerPlugin(ScrollTrigger);
 
-let mm = gsap.matchMedia();
+// let mm = gsap.matchMedia();
 
 // intro
 // ScrollTrigger.config({
 //   ignoreMobileResize: true,
 // });
+window.addEventListener("DOMContentLoaded", () => {
+  const timeline = gsap.timeline({ defaults: { duration: 0.5, ease: "ease" } });
+  timeline
+    .from(".intro__title .word", {
+      yPercent: 100,
+      opacity: 0,
+      stagger: 0.05,
+    })
+    .from(".intro__text", { yPercent: 100, opacity: 0 }, "0.2")
+    .from(
+      ".intro__btn",
+      {
+        yPercent: 100,
+        opacity: 0,
+      },
+      "0.4"
+    );
 
-const timeline = gsap.timeline({ defaults: { duration: 0.5, ease: "ease" } });
-timeline
-  .from(".intro__title .word", {
+  // popup
+
+  gsap.from(".tech__text", {
+    yPercent: 100,
+    opacity: 0,
+    duration: 0.5,
+    ease: "ease",
+    scrollTrigger: ".tech__text",
+  });
+  gsap.from(".tech__title .word", {
     yPercent: 100,
     opacity: 0,
     stagger: 0.05,
-  })
-  .from(".intro__text", { yPercent: 100, opacity: 0 }, "0.2")
-  .from(
-    ".intro__btn",
-    {
-      yPercent: 100,
-      opacity: 0,
-    },
-    "0.4"
-  );
-
-// popup
-
-gsap.from(".tech__text", {
-  yPercent: 100,
-  opacity: 0,
-  duration: 0.5,
-  ease: "ease",
-  scrollTrigger: ".tech__text",
-});
-gsap.from(".tech__title .word", {
-  yPercent: 100,
-  opacity: 0,
-  stagger: 0.05,
-  duration: 0.5,
-  ease: "ease",
-  scrollTrigger: ".tech__title",
-});
-gsap.from(".tech__subtitle", {
-  yPercent: 100,
-  duration: 0.5,
-  delay: 0.5,
-  ease: "ease",
-  opacity: 0,
-  scrollTrigger: ".tech__subtitle",
-});
-mm.add("(min-width: 800px)", () => {
+    duration: 0.5,
+    ease: "ease",
+    scrollTrigger: ".tech__title",
+  });
+  gsap.from(".tech__subtitle", {
+    yPercent: 100,
+    duration: 0.5,
+    delay: 0.5,
+    ease: "ease",
+    opacity: 0,
+    scrollTrigger: ".tech__subtitle",
+  });
+  // mm.add("(min-width: 800px)", () => {
   gsap.from(".tech .section__item", {
     yPercent: 20,
     opacity: 0,
@@ -66,57 +65,57 @@ mm.add("(min-width: 800px)", () => {
     ease: "ease",
     scrollTrigger: ".tech .section__row",
   });
-});
+  // });
 
-//scope
-gsap.from(".scope__text", {
-  yPercent: 100,
-  opacity: 0,
-  duration: 0.5,
-  ease: "ease",
-  scrollTrigger: ".scope__text",
-});
-gsap.from(".scope__title .word", {
-  yPercent: 100,
-  opacity: 0,
-  stagger: 0.05,
-  duration: 0.5,
-  ease: "ease",
-  scrollTrigger: ".scope__title",
-});
-gsap.from(".scope__subtitle", {
-  yPercent: 100,
-  duration: 0.5,
-  delay: 0.5,
-  ease: "ease",
-  opacity: 0,
-  scrollTrigger: ".scope__subtitle",
-});
-// aud
-gsap.from(".aud__text", {
-  yPercent: 100,
-  opacity: 0,
-  duration: 0.5,
-  ease: "ease",
-  scrollTrigger: ".aud__text",
-});
-gsap.from(".aud__title .word", {
-  yPercent: 100,
-  opacity: 0,
-  stagger: 0.05,
-  duration: 0.5,
-  ease: "ease",
-  scrollTrigger: ".aud__title",
-});
-gsap.from(".aud__subtitle", {
-  yPercent: 100,
-  duration: 0.5,
-  delay: 0.5,
-  ease: "ease",
-  opacity: 0,
-  scrollTrigger: ".aud__subtitle",
-});
-mm.add("(min-width: 800px)", () => {
+  //scope
+  gsap.from(".scope__text", {
+    yPercent: 100,
+    opacity: 0,
+    duration: 0.5,
+    ease: "ease",
+    scrollTrigger: ".scope__text",
+  });
+  gsap.from(".scope__title .word", {
+    yPercent: 100,
+    opacity: 0,
+    stagger: 0.05,
+    duration: 0.5,
+    ease: "ease",
+    scrollTrigger: ".scope__title",
+  });
+  gsap.from(".scope__subtitle", {
+    yPercent: 100,
+    duration: 0.5,
+    delay: 0.5,
+    ease: "ease",
+    opacity: 0,
+    scrollTrigger: ".scope__subtitle",
+  });
+  // aud
+  gsap.from(".aud__text", {
+    yPercent: 100,
+    opacity: 0,
+    duration: 0.5,
+    ease: "ease",
+    scrollTrigger: ".aud__text",
+  });
+  gsap.from(".aud__title .word", {
+    yPercent: 100,
+    opacity: 0,
+    stagger: 0.05,
+    duration: 0.5,
+    ease: "ease",
+    scrollTrigger: ".aud__title",
+  });
+  gsap.from(".aud__subtitle", {
+    yPercent: 100,
+    duration: 0.5,
+    delay: 0.5,
+    ease: "ease",
+    opacity: 0,
+    scrollTrigger: ".aud__subtitle",
+  });
+  // mm.add("(min-width: 800px)", () => {
   gsap.from(".aud .section__item", {
     yPercent: 20,
     opacity: 0,
@@ -125,60 +124,60 @@ mm.add("(min-width: 800px)", () => {
     ease: "ease",
     scrollTrigger: ".aud .section__row",
   });
-});
+  // });
 
-//news
-gsap.from(".news__text", {
-  yPercent: 100,
-  opacity: 0,
-  duration: 0.5,
-  ease: "ease",
-  scrollTrigger: ".news__text",
-});
-gsap.from(".news__title .word", {
-  yPercent: 100,
-  opacity: 0,
-  stagger: 0.05,
-  duration: 0.5,
-  ease: "ease",
-  scrollTrigger: ".news__title",
-});
-gsap.from(".news__subtitle", {
-  yPercent: 100,
-  duration: 0.5,
-  delay: 0.5,
-  ease: "ease",
-  opacity: 0,
-  scrollTrigger: ".news__subtitle",
-});
+  //news
+  gsap.from(".news__text", {
+    yPercent: 100,
+    opacity: 0,
+    duration: 0.5,
+    ease: "ease",
+    scrollTrigger: ".news__text",
+  });
+  gsap.from(".news__title .word", {
+    yPercent: 100,
+    opacity: 0,
+    stagger: 0.05,
+    duration: 0.5,
+    ease: "ease",
+    scrollTrigger: ".news__title",
+  });
+  gsap.from(".news__subtitle", {
+    yPercent: 100,
+    duration: 0.5,
+    delay: 0.5,
+    ease: "ease",
+    opacity: 0,
+    scrollTrigger: ".news__subtitle",
+  });
 
-// form
+  // form
 
-gsap.from(".form__text", {
-  yPercent: 100,
-  opacity: 0,
-  duration: 0.5,
-  ease: "ease",
-  scrollTrigger: ".form__text",
-});
-gsap.from(".form__title .word", {
-  yPercent: 100,
-  opacity: 0,
-  stagger: 0.05,
-  duration: 0.5,
-  ease: "ease",
-  scrollTrigger: ".form__title",
-});
-gsap.from(".form__subtitle", {
-  yPercent: 100,
-  duration: 0.5,
-  ease: "ease",
-  opacity: 0,
-  delay: 0.5,
-  scrollTrigger: ".form__subtitle",
-});
+  gsap.from(".form__text", {
+    yPercent: 100,
+    opacity: 0,
+    duration: 0.5,
+    ease: "ease",
+    scrollTrigger: ".form__text",
+  });
+  gsap.from(".form__title .word", {
+    yPercent: 100,
+    opacity: 0,
+    stagger: 0.05,
+    duration: 0.5,
+    ease: "ease",
+    scrollTrigger: ".form__title",
+  });
+  gsap.from(".form__subtitle", {
+    yPercent: 100,
+    duration: 0.5,
+    ease: "ease",
+    opacity: 0,
+    delay: 0.5,
+    scrollTrigger: ".form__subtitle",
+  });
 
-mm.add("(min-width: 800px)", () => {
+  // mm.add("(min-width: 800px)", () => {
   gsap.from(".form .inp", {
     yPercent: 50,
     opacity: 0,
@@ -198,8 +197,8 @@ mm.add("(min-width: 800px)", () => {
     ease: "ease",
     scrollTrigger: ".form .form__item",
   });
+  // });
 });
-
 const videoPlay = document.querySelector(".video__play");
 const videoPlayBtn = document.querySelector(".video__play-img");
 
