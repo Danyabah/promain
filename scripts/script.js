@@ -313,12 +313,10 @@ function sToStr(s) {
 }
 
 videoHover.addEventListener("mouseenter", () => {
-  console.log("fff");
   videoPoster.pause();
 });
 
 videoHover.addEventListener("mouseleave", () => {
-  console.log("fff");
   videoPoster.play();
 });
 
