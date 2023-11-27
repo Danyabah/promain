@@ -15,15 +15,15 @@ ScrollTrigger.config({
 const timeline = gsap.timeline({ defaults: { duration: 0.5, ease: "ease" } });
 timeline
   .from(".intro__title .word", {
-    y: "100%",
+    yPercent: 100,
     opacity: 0,
     stagger: 0.05,
   })
-  .from(".intro__text", { y: "100%", opacity: 0 }, "0.2")
+  .from(".intro__text", { yPercent: 100, opacity: 0 }, "0.2")
   .from(
     ".intro__btn",
     {
-      y: "100%",
+      yPercent: 100,
       opacity: 0,
     },
     "0.4"
@@ -32,14 +32,14 @@ timeline
 // popup
 
 gsap.from(".tech__text", {
-  y: "100%",
+  yPercent: 100,
   opacity: 0,
   duration: 0.5,
   ease: "ease",
   scrollTrigger: ".tech__text",
 });
 gsap.from(".tech__title .word", {
-  y: "100%",
+  yPercent: 100,
   opacity: 0,
   stagger: 0.05,
   duration: 0.5,
@@ -47,7 +47,7 @@ gsap.from(".tech__title .word", {
   scrollTrigger: ".tech__title",
 });
 gsap.from(".tech__subtitle", {
-  y: "100%",
+  yPercent: 100,
   duration: 0.5,
   delay: 0.5,
   ease: "ease",
@@ -55,7 +55,7 @@ gsap.from(".tech__subtitle", {
   scrollTrigger: ".tech__subtitle",
 });
 gsap.from(".tech .section__item", {
-  y: "20%",
+  yPercent: 20,
   opacity: 0,
   stagger: 0.2,
   delay: 0.5,
@@ -65,14 +65,14 @@ gsap.from(".tech .section__item", {
 });
 //scope
 gsap.from(".scope__text", {
-  y: "100%",
+  yPercent: 100,
   opacity: 0,
   duration: 0.5,
   ease: "ease",
   scrollTrigger: ".scope__text",
 });
 gsap.from(".scope__title .word", {
-  y: "100%",
+  yPercent: 100,
   opacity: 0,
   stagger: 0.05,
   duration: 0.5,
@@ -80,7 +80,7 @@ gsap.from(".scope__title .word", {
   scrollTrigger: ".scope__title",
 });
 gsap.from(".scope__subtitle", {
-  y: "100%",
+  yPercent: 100,
   duration: 0.5,
   delay: 0.5,
   ease: "ease",
@@ -89,14 +89,14 @@ gsap.from(".scope__subtitle", {
 });
 // aud
 gsap.from(".aud__text", {
-  y: "100%",
+  yPercent: 100,
   opacity: 0,
   duration: 0.5,
   ease: "ease",
   scrollTrigger: ".aud__text",
 });
 gsap.from(".aud__title .word", {
-  y: "100%",
+  yPercent: 100,
   opacity: 0,
   stagger: 0.05,
   duration: 0.5,
@@ -104,7 +104,7 @@ gsap.from(".aud__title .word", {
   scrollTrigger: ".aud__title",
 });
 gsap.from(".aud__subtitle", {
-  y: "100%",
+  yPercent: 100,
   duration: 0.5,
   delay: 0.5,
   ease: "ease",
@@ -112,7 +112,7 @@ gsap.from(".aud__subtitle", {
   scrollTrigger: ".aud__subtitle",
 });
 gsap.from(".aud .section__item", {
-  y: "20%",
+  yPercent: 20,
   opacity: 0,
   stagger: 0.2,
   duration: 0.5,
@@ -122,14 +122,14 @@ gsap.from(".aud .section__item", {
 
 //news
 gsap.from(".news__text", {
-  y: "100%",
+  yPercent: 100,
   opacity: 0,
   duration: 0.5,
   ease: "ease",
   scrollTrigger: ".news__text",
 });
 gsap.from(".news__title .word", {
-  y: "100%",
+  yPercent: 100,
   opacity: 0,
   stagger: 0.05,
   duration: 0.5,
@@ -137,7 +137,7 @@ gsap.from(".news__title .word", {
   scrollTrigger: ".news__title",
 });
 gsap.from(".news__subtitle", {
-  y: "100%",
+  yPercent: 100,
   duration: 0.5,
   delay: 0.5,
   ease: "ease",
@@ -148,14 +148,14 @@ gsap.from(".news__subtitle", {
 // form
 
 gsap.from(".form__text", {
-  y: "100%",
+  yPercent: 100,
   opacity: 0,
   duration: 0.5,
   ease: "ease",
   scrollTrigger: ".form__text",
 });
 gsap.from(".form__title .word", {
-  y: "100%",
+  yPercent: 100,
   opacity: 0,
   stagger: 0.05,
   duration: 0.5,
@@ -163,7 +163,7 @@ gsap.from(".form__title .word", {
   scrollTrigger: ".form__title",
 });
 gsap.from(".form__subtitle", {
-  y: "100%",
+  yPercent: 100,
   duration: 0.5,
   ease: "ease",
   opacity: 0,
@@ -172,7 +172,7 @@ gsap.from(".form__subtitle", {
 });
 
 gsap.from(".form .inp", {
-  y: "50%",
+  yPercent: 50,
   opacity: 0,
   stagger: 0.2,
   delay: 0.5,
