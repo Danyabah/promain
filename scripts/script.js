@@ -10,9 +10,9 @@ gsap.registerPlugin(ScrollTrigger);
 let mm = gsap.matchMedia();
 
 // intro
-ScrollTrigger.config({
-  ignoreMobileResize: true,
-});
+// ScrollTrigger.config({
+//   ignoreMobileResize: true,
+// });
 
 const timeline = gsap.timeline({ defaults: { duration: 0.5, ease: "ease" } });
 timeline
