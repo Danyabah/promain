@@ -7,6 +7,8 @@ const newsTitle = new SplitType(".news__title");
 
 gsap.registerPlugin(ScrollTrigger);
 
+let mm = gsap.matchMedia();
+
 // intro
 ScrollTrigger.config({
   ignoreMobileResize: true,
@@ -54,15 +56,18 @@ gsap.from(".tech__subtitle", {
   opacity: 0,
   scrollTrigger: ".tech__subtitle",
 });
-gsap.from(".tech .section__item", {
-  yPercent: 20,
-  opacity: 0,
-  stagger: 0.2,
-  delay: 0.5,
-  duration: 0.5,
-  ease: "ease",
-  scrollTrigger: ".tech .section__row",
+mm.add("(min-width: 800px)", () => {
+  gsap.from(".tech .section__item", {
+    yPercent: 20,
+    opacity: 0,
+    stagger: 0.2,
+    delay: 0.5,
+    duration: 0.5,
+    ease: "ease",
+    scrollTrigger: ".tech .section__row",
+  });
 });
+
 //scope
 gsap.from(".scope__text", {
   yPercent: 100,
@@ -111,13 +116,15 @@ gsap.from(".aud__subtitle", {
   opacity: 0,
   scrollTrigger: ".aud__subtitle",
 });
-gsap.from(".aud .section__item", {
-  yPercent: 20,
-  opacity: 0,
-  stagger: 0.2,
-  duration: 0.5,
-  ease: "ease",
-  scrollTrigger: ".aud .section__row",
+mm.add("(min-width: 800px)", () => {
+  gsap.from(".aud .section__item", {
+    yPercent: 20,
+    opacity: 0,
+    stagger: 0.2,
+    duration: 0.5,
+    ease: "ease",
+    scrollTrigger: ".aud .section__row",
+  });
 });
 
 //news
@@ -171,24 +178,26 @@ gsap.from(".form__subtitle", {
   scrollTrigger: ".form__subtitle",
 });
 
-gsap.from(".form .inp", {
-  yPercent: 50,
-  opacity: 0,
-  stagger: 0.2,
-  delay: 0.5,
-  duration: 0.5,
-  ease: "ease",
-  scrollTrigger: ".form .form__item",
-});
+mm.add("(min-width: 800px)", () => {
+  gsap.from(".form .inp", {
+    yPercent: 50,
+    opacity: 0,
+    stagger: 0.2,
+    delay: 0.5,
+    duration: 0.5,
+    ease: "ease",
+    scrollTrigger: ".form .form__item",
+  });
 
-gsap.to(".form .inp", {
-  y: "0%",
-  opacity: 1,
-  stagger: 0.2,
-  delay: 0.5,
-  duration: 0.5,
-  ease: "ease",
-  scrollTrigger: ".form .form__item",
+  gsap.to(".form .inp", {
+    y: "0%",
+    opacity: 1,
+    stagger: 0.2,
+    delay: 0.5,
+    duration: 0.5,
+    ease: "ease",
+    scrollTrigger: ".form .form__item",
+  });
 });
 
 const videoPlay = document.querySelector(".video__play");
