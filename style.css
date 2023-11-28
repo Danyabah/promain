@@ -607,7 +607,7 @@ body {
   text-align: center;
   max-width: 479px;
 }
-.video__col::before {
+/* .video__col::before {
   content: "";
   position: absolute;
   width: 291.287px;
@@ -639,7 +639,7 @@ body {
   bottom: 0;
   right: -50px;
   z-index: -1;
-}
+} */
 
 .intro__text {
   color: var(--color-gray-600);
