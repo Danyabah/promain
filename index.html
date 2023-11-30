@@ -42,6 +42,7 @@
     </header>
     <main class="main">
       <section class="intro">
+        <!-- <div id="p5-container" class="canvas__container"></div> -->
         <div class="container">
           <div class="intro__col">
             <div class="intro__rus">
@@ -208,16 +209,168 @@
           </div>
           <div class="scope__body">
             <ul class="scope__menu">
-              <li class="scope__item scope__item-active">Индикаторы риска</li>
-              <li class="scope__item">Дашборды</li>
-              <li class="scope__item">Мониторинг</li>
-              <li class="scope__item">Интерактивная карта</li>
-              <li class="scope__item">Root Cause</li>
-              <li class="scope__item">Симуляция</li>
-              <li class="scope__item">Benchmark</li>
-              <li class="scope__item">Диаграмма вариантов</li>
+              <li class="scope__item scope__item-active" data-id="1">
+                Индикаторы риска
+              </li>
+              <li class="scope__item" data-id="2">Дашборды</li>
+              <li class="scope__item" data-id="3">Мониторинг</li>
+              <li class="scope__item" data-id="4">Интерактивная карта</li>
+              <li class="scope__item" data-id="5">Root Cause</li>
+              <li class="scope__item" data-id="6">Симуляция</li>
+              <li class="scope__item" data-id="7">Benchmark</li>
+              <li class="scope__item" data-id="8">Диаграмма вариантов</li>
             </ul>
-            <div class="scope__example"></div>
+            <div class="scope__example">
+              <div class="scope__example-item scope__1">
+                <img
+                  class="scope__img"
+                  src="./img/scope5-1.png"
+                  alt=""
+                  data-id="1"
+                />
+              </div>
+              <div class="scope__example-item scope__2 hidden">
+                <img
+                  class="scope__img"
+                  src="./img/scope5-1.png"
+                  alt=""
+                  data-id="1"
+                />
+                <img
+                  class="scope__img hidden"
+                  src="./img/scope5-2.png"
+                  alt=""
+                  data-id="2"
+                />
+                <div class="scope__bottom">
+                  <div class="scope__switch">
+                    <div class="scope__item scope__item-active" data-id="2">
+                      Вся информация
+                    </div>
+                    <div class="scope__item" data-id="3">Подрядчик</div>
+                  </div>
+                </div>
+              </div>
+              <div class="scope__example-item scope__3 hidden">
+                <img
+                  class="scope__img"
+                  src="./img/scope5-1.png"
+                  alt=""
+                  data-id="1"
+                />
+              </div>
+              <div class="scope__example-item scope__4 hidden">
+                <img
+                  class="scope__img"
+                  src="./img/scope5-2.png"
+                  alt=""
+                  data-id="3"
+                />
+                <img
+                  class="scope__img"
+                  src="./img/scope5-3.png"
+                  alt=""
+                  data-id="2"
+                />
+                <img
+                  class="scope__img"
+                  src="./img/scope5-1.png"
+                  alt=""
+                  data-id="1"
+                />
+                <div class="scope__bottom">
+                  <div class="scope__switch">
+                    <input
+                      type="range"
+                      class="scope__range"
+                      min="-1"
+                      max="1"
+                      step="0.1"
+                      value="-1"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="scope__example-item scope__5 hidden">
+                <img
+                  class="scope__img"
+                  src="./img/scope5-1.png"
+                  alt=""
+                  data-id="1"
+                />
+                <img
+                  class="scope__img hidden"
+                  src="./img/scope5-2.png"
+                  alt=""
+                  data-id="2"
+                />
+                <div class="scope__bottom">
+                  <button data-id="1" class="btn scope__btn">
+                    <img src="./img/eye.svg" alt="" />
+                    <span>Показать причины</span>
+                  </button>
+                  <button data-id="2" class="btn scope__btn hidden">
+                    <img src="./img/eye-off.svg" alt="" />
+                    <span>Скрыть причины</span>
+                  </button>
+                </div>
+              </div>
+              <div class="scope__example-item scope__6 hidden">
+                <img
+                  class="scope__img"
+                  src="./img/scope5-1.png"
+                  alt=""
+                  data-id="1"
+                />
+                <img
+                  class="scope__img hidden"
+                  src="./img/scope5-2.png"
+                  alt=""
+                  data-id="2"
+                />
+                <div class="scope__bottom">
+                  <button data-id="1" class="btn scope__btn">
+                    <img src="./img/eye.svg" alt="" />
+                    <span>Простроить симуляцию</span>
+                  </button>
+                  <button data-id="2" class="btn scope__btn hidden">
+                    <img src="./img/eye-off.svg" alt="" />
+                    <span>Скрыть симуляцию</span>
+                  </button>
+                </div>
+              </div>
+              <div class="scope__example-item scope__7 hidden">
+                <img
+                  class="scope__img"
+                  src="./img/scope5-1.png"
+                  alt=""
+                  data-id="1"
+                />
+                <img
+                  class="scope__img hidden"
+                  src="./img/scope5-2.png"
+                  alt=""
+                  data-id="2"
+                />
+                <div class="scope__bottom">
+                  <div class="scope__switch">
+                    <span> Сравнение с эталоном </span>
+                    <label class="switch">
+                      <input type="checkbox" class="scope__inp" />
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="scope__example-item scope__8 hidden">
+                <img
+                  class="scope__img"
+                  src="./img/scope5-1.png"
+                  alt=""
+                  data-id="1"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -402,6 +555,7 @@
               <input type="tel" class="inp" placeholder="Телефон" />
               <input type="email" class="inp" placeholder="Электронная почта" />
             </div>
+            <div class="error hidden">Текст ошибки</div>
             <div class="form__bottom">
               <p class="text-form">
                 Заполняя форму, я принимаю

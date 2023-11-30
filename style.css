@@ -517,6 +517,14 @@ body {
   border-bottom: 1px solid var(--color-gray-300);
 }
 /* --------------intro----------------  */
+.intro {
+  position: relative;
+}
+/* canvas */
+/* .canvas__container {
+  width: 100vw;
+  height: 953px;
+} */
 .container {
   max-width: 1112px;
   margin: 0 auto;
@@ -883,16 +891,22 @@ body {
 .scope__body {
   margin-top: 73px;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 19px;
+  border-radius: 16px;
+  background: #fff;
+  padding: 22px 16px;
 }
 .scope__menu {
   display: flex;
+  flex-direction: column;
+  /*   
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; */
   gap: 4px;
 }
 .scope__item {
+  user-select: none;
   padding: 16px 24px;
   width: 275px;
   border-radius: var(--radius-md);
@@ -908,8 +922,20 @@ body {
   letter-spacing: 0.2px;
   transition: all 0.3s ease 0s;
 }
+.scope__switch .scope__item {
+  width: initial;
+  padding: 8px 16px;
+  height: initial;
+  white-space: nowrap;
+}
+.scope__example-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 .scope__item:hover {
-  background-color: initial;
+  /* background-color: initial; */
+  background-color: #f3f4f9;
 }
 .scope__item-active {
   background: var(--color-brand-cyan);
@@ -922,8 +948,145 @@ body {
   border-radius: var(--radius-md);
   background: #fff;
   width: 100%;
-  height: 380px;
-  margin-top: 5px;
+  height: 564px;
+}
+.scope__img {
+  width: 100%;
+  height: 564px;
+  object-fit: contain;
+  user-select: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.scope__range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(
+      0deg,
+      var(--color-white-85, rgba(255, 255, 255, 0.85)) 0%,
+      var(--color-white-85, rgba(255, 255, 255, 0.85)) 100%
+    ),
+    var(--color-brand-cyan, #0647d1);
+  cursor: pointer;
+  width: 249px;
+
+  height: 8px;
+  border-radius: 16px;
+}
+.scope__range::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  /* margin-top: -12px; */
+  background-color: #0647d1;
+  width: 32px;
+  border-radius: 50%;
+  height: 32px;
+}
+.scope__switch {
+  display: flex;
+  padding: 16px 24px;
+  align-items: center;
+  gap: 16px;
+  border-radius: 8px;
+  background: #f3f4f9;
+}
+.scope__2 .scope__switch {
+  gap: 8px;
+  padding: 8px;
+}
+.scope__4 .scope__switch {
+  padding: 24px 32px;
+}
+.scope__switch span {
+  color: #1b2634;
+  font-family: Golos;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+.scope__bottom {
+  position: absolute;
+  left: 50%;
+  bottom: 35px;
+  transform: translate(-50%, 0);
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.success {
+  background: #2fd7d4;
+  color: #1b2634;
+}
+.error {
+  margin-top: 15px;
+  color: #ff5f57;
+  font-family: Golos;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 18.2px */
+  letter-spacing: 0.14px;
+}
+
+input:checked + .slider {
+  background-color: rgba(6, 71, 209, 1);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgba(6, 71, 209, 1);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 /* ----------------------aud-------------------------- */
 .aud {
@@ -953,8 +1116,37 @@ body {
     height: 34px;
     padding: 8px 16px;
   }
+  .scope__example {
+    height: 368px;
+  }
+  .scope__img {
+    height: 368px;
+  }
+  .scope__btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  .scope__switch span {
+    font-size: 14px;
+  }
+  .scope__switch {
+    padding: 8px 16px;
+  }
+  .scope__4 .scope__switch {
+    padding: 16px 16px;
+  }
 }
-
+@media only screen and (max-width: 626px) {
+  .scope__menu {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    flex-direction: row;
+  }
+  .scope__body {
+    flex-direction: column;
+  }
+}
 @media only screen and (max-width: 500px) {
   .section__item {
     min-width: 360px;
@@ -988,11 +1180,6 @@ body {
     height: 316px;
   }
 
-  .scope__menu {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    overflow-x: scroll;
-  }
   .popup__video-col {
     width: 98%;
   }
@@ -1003,6 +1190,7 @@ body {
     background-size: 70%;
   }
 }
+
 /* -----------------form----------------- */
 .form {
   padding-bottom: 150px;

@@ -6,13 +6,6 @@ const scopTitle = new SplitType(".scope__title");
 const newsTitle = new SplitType(".news__title");
 gsap.registerPlugin(ScrollTrigger);
 
-// let mm = gsap.matchMedia();
-
-// intro
-// ScrollTrigger.config({
-//   ignoreMobileResize: true,
-// });
-
 const timeline = gsap.timeline({ defaults: { duration: 0.5, ease: "ease" } });
 timeline
   .from(".intro__title .word", {
@@ -55,7 +48,7 @@ gsap.from(".tech__subtitle", {
   opacity: 0,
   scrollTrigger: ".tech__subtitle",
 });
-// mm.add("(min-width: 800px)", () => {
+
 gsap.from(".tech .section__item", {
   yPercent: 20,
   opacity: 0,
@@ -65,7 +58,6 @@ gsap.from(".tech .section__item", {
   ease: "ease",
   scrollTrigger: ".tech .section__row",
 });
-// });
 
 //scope
 gsap.from(".scope__text", {
@@ -115,7 +107,6 @@ gsap.from(".aud__subtitle", {
   opacity: 0,
   scrollTrigger: ".aud__subtitle",
 });
-// mm.add("(min-width: 800px)", () => {
 gsap.from(".aud .section__item", {
   yPercent: 20,
   opacity: 0,
@@ -124,7 +115,6 @@ gsap.from(".aud .section__item", {
   ease: "ease",
   scrollTrigger: ".aud .section__row",
 });
-// });
 
 //news
 gsap.from(".news__text", {
@@ -177,7 +167,6 @@ gsap.from(".form__subtitle", {
   scrollTrigger: ".form__subtitle",
 });
 
-// mm.add("(min-width: 800px)", () => {
 gsap.from(".form .inp", {
   yPercent: 50,
   opacity: 0,
@@ -197,7 +186,6 @@ gsap.to(".form .inp", {
   ease: "ease",
   scrollTrigger: ".form .form__item",
 });
-// });
 
 const videoPlay = document.querySelector(".video__play");
 const videoPlayBtn = document.querySelector(".video__play-img");
@@ -206,17 +194,7 @@ const popup = document.querySelector(".popup");
 
 popup.addEventListener("click", (event) => {
   if (event.target === popup) {
-    // gsap.to(".popup", {
-    //   opacity: 0,
-    //   duration: 0.5,
-    // });
-    // gsap.to(".popup__video-col", {
-    //   y: "-100%",
-    //   duration: 0.5,
-    // });
-    // setTimeout(() => {
     popup.classList.add("hidden");
-    // }, 500);
     showPreview();
     pause();
   }
@@ -246,21 +224,82 @@ videoPlayBtn.addEventListener("click", (e) => {
   play();
 });
 
-const scopeItems = document.querySelectorAll(".scope__item");
+// scope
+const scopeItems = document.querySelectorAll(".scope__menu .scope__item");
+const scopeExamples = document.querySelectorAll(".scope__example-item");
+const scopeButtons = document.querySelectorAll(".scope__btn");
+const scopeSwitch = document.querySelector(".scope__inp");
+const dashButtons = document.querySelectorAll(".scope__switch .scope__item");
+const scopeRange = document.querySelector(".scope__range");
+const rangeImg1 = document.querySelector(`.scope__4 .scope__img[data-id="1"]`);
+const rangeImg2 = document.querySelector(`.scope__4 .scope__img[data-id="2"]`);
+const rangeImg3 = document.querySelector(`.scope__4 .scope__img[data-id="3"]`);
 
-scopeItems.forEach((item) => {
+scopeSwitch.onchange = function () {
+  let [item, img1, img2] = getElements(scopeSwitch);
+  changeImage(!scopeSwitch.checked, img1, img2);
+};
+
+scopeRange.oninput = function () {
+  let v = scopeRange.value;
+  if (v <= 0) {
+    rangeImg1.style.opacity = Math.abs(v);
+  } else {
+    rangeImg2.style.opacity = 1 - v;
+  }
+};
+
+dashButtons.forEach((btn, index) => {
+  btn.onclick = function () {
+    btn.classList.add("scope__item-active");
+    let [item, img1, img2] = getElements(btn);
+    dashButtons[Math.abs(index - 1)].classList.remove("scope__item-active");
+    changeImage(index == 0, img1, img2);
+  };
+});
+
+scopeItems.forEach((item, index) => {
   item.onclick = function () {
     clearScopeClass();
     item.classList.add("scope__item-active");
+    scopeExamples[index].classList.remove("hidden");
+  };
+});
+
+function getElements(elem) {
+  let item = elem.closest(".scope__example-item");
+  let img1 = item.querySelector(`.scope__img[data-id="1"]`);
+  let img2 = item.querySelector(`.scope__img[data-id="2"]`);
+
+  return [item, img1, img2];
+}
+
+scopeButtons.forEach((btn) => {
+  btn.onclick = function () {
+    let [item, img1, img2] = getElements(btn);
+    let btn1 = item.querySelector(`.btn[data-id="1"]`);
+    let btn2 = item.querySelector(`.btn[data-id="2"]`);
+    changeImage(btn == btn2, img1, img2);
+    changeImage(btn == btn2, btn1, btn2);
   };
 });
 
 function clearScopeClass() {
-  scopeItems.forEach((item) => {
+  scopeItems.forEach((item, index) => {
     item.classList.remove("scope__item-active");
+    scopeExamples[index].classList.add("hidden");
   });
 }
 
+function changeImage(bool, img1, img2) {
+  if (bool) {
+    img2.classList.add("hidden");
+    img1.classList.remove("hidden");
+  } else {
+    img1.classList.add("hidden");
+    img2.classList.remove("hidden");
+  }
+}
 // video
 
 const popupPlay = document.querySelector(".popup__play");
