@@ -929,7 +929,7 @@ body {
   white-space: nowrap;
 }
 .scope__example-item {
-  position: relative;
+  /* position: relative; */
   width: 100%;
   height: 100%;
 }
@@ -949,6 +949,7 @@ body {
   background: #fff;
   width: 100%;
   height: 564px;
+  position: relative;
 }
 .scope__img {
   width: 100%;
@@ -957,6 +958,7 @@ body {
   user-select: none;
   position: absolute;
   left: 0;
+  border-radius: 8px;
   top: 0;
 }
 .scope__range {
@@ -1010,7 +1012,7 @@ body {
 .scope__bottom {
   position: absolute;
   left: 50%;
-  bottom: 35px;
+  bottom: 55px;
   transform: translate(-50%, 0);
 }
 
@@ -1121,8 +1123,6 @@ input:checked + .slider:before {
   }
   .scope__img {
     height: 368px;
-    object-fit: cover;
-    padding-bottom: 30%;
   }
   .scope__btn {
     font-size: 14px;
@@ -1130,6 +1130,9 @@ input:checked + .slider:before {
   }
   .scope__switch span {
     font-size: 14px;
+  }
+  .scope__bottom {
+    bottom: 10px;
   }
   .scope__switch {
     padding: 8px 16px;
@@ -1150,6 +1153,10 @@ input:checked + .slider:before {
   }
 }
 @media only screen and (max-width: 500px) {
+  .scope__img {
+    object-fit: cover;
+    padding-bottom: 5%;
+  }
   .section__item {
     min-width: 360px;
     max-width: initial;
@@ -1192,7 +1199,28 @@ input:checked + .slider:before {
     background-size: 70%;
   }
 }
-
+@media only screen and (max-width: 450px) {
+  .scope__img {
+    object-fit: cover;
+    padding-bottom: 15%;
+  }
+  .scope__example-item {
+    height: 315px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .scope__img {
+    object-fit: cover;
+    padding-bottom: 30%;
+  }
+  .scope__example-item {
+    height: 266px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+}
 /* -----------------form----------------- */
 .form {
   padding-bottom: 150px;
