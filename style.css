@@ -1121,6 +1121,8 @@ input:checked + .slider:before {
   }
   .scope__img {
     height: 368px;
+    object-fit: cover;
+    padding-bottom: 30%;
   }
   .scope__btn {
     font-size: 14px;
