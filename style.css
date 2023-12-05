@@ -917,7 +917,7 @@ body {
   font-weight: 400;
   background-color: #fff;
   line-height: 130%;
-  height: 58px;
+  min-height: 58px;
   text-align: center;
   letter-spacing: 0.2px;
   transition: all 0.3s ease 0s;
@@ -1130,7 +1130,7 @@ input:checked + .slider:before {
     font-size: 14px;
     width: auto;
     white-space: nowrap;
-    height: 34px;
+    min-height: 34px;
     padding: 8px 16px;
   }
   .scope__example {
