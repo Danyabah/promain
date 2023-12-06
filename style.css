@@ -928,6 +928,7 @@ body {
   padding: 8px 16px;
   height: initial;
   white-space: nowrap;
+  min-height: auto;
 }
 .scope__example-item {
   /* position: relative; */
@@ -1028,7 +1029,7 @@ body {
 .scope__bottom {
   position: absolute;
   left: 50%;
-  bottom: 55px;
+  bottom: 45px;
   transform: translate(-50%, 0);
 }
 
