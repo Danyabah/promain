@@ -1084,7 +1084,7 @@ body {
 }
 @media (max-width: 500px) {
   .p5__bg-1 {
-    top: 20%;
+    top: 200px;
     left: 0;
   }
   .p5__bg-2 {
