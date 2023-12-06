@@ -541,6 +541,7 @@ body {
   text-align: center;
   padding: 129px 0;
   gap: var(--spacing-5);
+  position: relative;
 }
 .video {
   padding-bottom: 207px;
@@ -1039,7 +1040,39 @@ body {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
+/* p5 */
+.p5__container {
+  width: 100vw;
+  height: 70vh;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  top: 25vh;
+}
+.p5__bg {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  /* z-index: 1; */
+}
+.p5__bg-1 {
+  top: 13%;
+  left: 0;
+}
+.p5__bg-2 {
+  bottom: 40%;
+  left: 0;
+  z-index: -1;
+}
+@media (max-width: 500px) {
+  .p5__bg-1 {
+    top: 20%;
+    left: 0;
+  }
+  .p5__bg-2 {
+    bottom: 10%;
+  }
+}
 .slider:before {
   position: absolute;
   content: "";

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./style.css" />
     <link type="image/svg+xml" href="./img/avatar.svg" rel="shortcut icon" />
     <link type="image/svg+xml" href="./img/avatar.svg" rel="icon" />
+    <!-- <script src="./libs/p5.min.js" defer></script> -->
+
     <script src="./libs/split-type/umd/index.min.js"></script>
     <script
       src="./libs/gsap-public/minified/ScrollTrigger.min.js"
@@ -42,6 +44,10 @@
     </header>
     <main class="main">
       <section class="intro">
+        <img class="p5__bg p5__bg-1" src="./img/top.png" alt="" />
+        <div class="p5__container"></div>
+        <img class="p5__bg p5__bg-2" src="./img/height.png" alt="" />
+
         <!-- <div id="p5-container" class="canvas__container"></div> -->
         <div class="container">
           <div class="intro__col">
@@ -601,5 +607,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+    <script src="./scripts/sketch.js"></script>
   </body>
 </html>
