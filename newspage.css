@@ -9,6 +9,10 @@ p {
   padding-top: 138px;
   padding-bottom: 182px;
 }
+.newspage ul,
+.newspage li {
+  list-style: initial;
+}
 .newspage__container {
   max-width: 930px;
   margin: 0 auto;
