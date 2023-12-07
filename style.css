@@ -1015,11 +1015,11 @@ body {
   /* z-index: 1; */
 }
 .p5__bg-1 {
-  top: 13%;
+  top: 22vh;
   left: 0;
 }
 .p5__bg-2 {
-  bottom: 40%;
+  bottom: 30%;
   left: 0;
   z-index: -1;
 }
