@@ -1407,6 +1407,7 @@ input:checked + .slider:before {
     line-height: 110%;
     letter-spacing: -0.2px;
   }
+  /*  */
   .news__body-scroll {
     flex-wrap: nowrap;
     justify-content: flex-start;
