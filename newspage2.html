@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Промайн</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./newspage.css" />
+    <link type="image/svg+xml" href="./img/avatar.svg" rel="shortcut icon" />
+    <link type="image/svg+xml" href="./img/avatar.svg" rel="icon" />
+    <script src="./libs/split-type/umd/index.min.js"></script>
+    <script
+      src="./libs/gsap-public/minified/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="./libs/gsap-public/minified/gsap.min.js" defer></script>
+    <script src="./scripts/newspage.js" type="module" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__left">
+        <a href="./index.html" class="header__logo">
+          <img src="./img/logo.svg" alt="" />
+        </a>
+        <nav class="header__nav">
+          <a href="./index.html#about" class="header__link">О продукте</a>
+          <a href="./index.html#tech" class="header__link">Технология</a>
+          <a href="./index.html#advantage" class="header__link">Преимущества</a>
+          <a href="./index.html#aud" class="header__link">Аудитория</a>
+        </nav>
+      </div>
+      <div class="header__right">
+        <div class="header__switch">
+          <span class="header__en header__active">EN</span>
+          <span class="header__ru">RU</span>
+        </div>
+        <a class="btn btn-s" href="./index.html#form">Запросить демо</a>
+      </div>
+      <div class="burger">
+        <img src="./img/burger.svg" alt="" />
+      </div>
+    </header>
+    <main class="main main-newspage">
+      <section class="newspage">
+        <div class="newspage__container">
+          <div class="newspage__item">
+            <img class="newspage__img" src="./img/news.jpg" />
+            <div class="newspage__info">
+              <p class="newspage__time">25-26 июля 2023</p>
+              <h1 class="newspage__name">
+                Промайн в реестре российского Программного обеспечения
+              </h1>
+              <h2 class="newspage__text">
+                <p>
+                  Промайн – универсальный инструмент оптимизации
+                  бизнес-процессов на основе технологии process mining.
+                </p>
+                <p>
+                  Включение в реестр открывает широкие возможности перед
+                  правообладателями ИТ-решений. Такие решения проходят проверку
+                  на уязвимость и оценку наличия санкционных компонентов.
+                </p>
+                <p>
+                  Успешная регистрация в реестре российского программного
+                  обеспечения подтверждает: Промайн надежен и соответствует
+                  требованиям Минцифры
+                </p>
+              </h2>
+              <a href="./index.html" class="newspage__link"
+                >Вернуться на главную</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="form" id="form">
+        <div class="container">
+          <div class="section__top">
+            <div class="section__vec">
+              <img src="./img/Vecleft.svg" alt="" />
+              <h4 class="text-up section__text form__text">Демонстранция</h4>
+              <img src="./img/Vecright.svg" alt="" />
+            </div>
+
+            <h2 class="title-b section__title form__title">
+              Проверьте Промайн в деле
+            </h2>
+            <h3 class="text-gr section__subtitle form__subtitle">
+              Оставьте свои контактные данные, и мы проведем для вас
+              демонстрацию. Наши эксперты свяжутся с вами в течение двух рабочих
+              дней.
+            </h3>
+          </div>
+          <form action="" class="form__item">
+            <div class="form__body">
+              <input type="text" class="inp" placeholder="Ваше имя" />
+              <input type="text" class="inp" placeholder="Компания" />
+              <input type="tel" class="inp" placeholder="Телефон" />
+              <input type="email" class="inp" placeholder="Электронная почта" />
+            </div>
+            <div class="error hidden">Текст ошибки</div>
+            <div class="form__bottom">
+              <p class="text-form">
+                Заполняя форму, я принимаю
+                <a href=""> условия передачи информации</a>
+              </p>
+              <button class="btn" type="submit">Запросить демо</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer footer-newspage">
+      <div class="container">
+        <div class="footer__body">
+          <a href="" class="text-s footer__link">Политика конфиденциальности</a>
+          <span class="text-s footer__link">·</span>
+          <a href="" class="text-s footer__link">Документы</a>
+          <span class="text-s footer__link">·</span>
+          <a href="" class="text-s footer__link">Патент</a>
+          <span class="text-s footer__link">·</span>
+          <a href="" class="text-s footer__link">Инструкция</a>
+          <a href="" class="text-s footer__link">gpn_promine@gazprom-neft.ru</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
