@@ -6,6 +6,10 @@ p {
   margin-bottom: 20px;
   /*  */
 }
+.newspage ul,
+.newspage li {
+  list-style: initial;
+}
 .newspage {
   padding-top: 138px;
   padding-bottom: 182px;
