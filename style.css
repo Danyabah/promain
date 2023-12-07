@@ -1412,6 +1412,10 @@ input:checked + .slider:before {
     justify-content: flex-start;
     overflow-x: scroll;
   }
+  .news__item {
+    min-width: 300px;
+    max-width: 300px;
+  }
 }
 
 /* -----------------all ----------------- */
