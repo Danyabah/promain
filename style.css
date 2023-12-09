@@ -531,9 +531,10 @@ body {
 .video__container {
   position: relative;
 
-  margin: 0px 0px 15px 0px;
+  /* margin: 0px 0px 15px 0px; */
+  margin: 0px;
 
-  padding: 0px 0px 56% 0px;
+  padding: 0px 0px 56%;
 }
 
 .video__poster {
@@ -542,6 +543,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  border-radius: 16px;
   height: 100%;
 }
 .video__item {
@@ -723,18 +725,16 @@ body {
   max-width: 400px;
   flex: 1 0 1;
 }
-.section__item-bg:nth-child(1) {
-  background-image: url(./img/tech-bg.png);
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 55%;
+.section__item-bg {
+  position: relative;
 }
-.section__item-bg:nth-child(2) {
-  background-image: url(./img/tech-bg2.png);
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 55%;
+.section__item-bg .bg {
+  position: absolute;
+  top: 0;
+  width: 55%;
+  right: 0;
 }
+
 .section__item-text {
   font-size: 18px;
 }
@@ -860,10 +860,11 @@ body {
   background-color: #fff;
   line-height: 130%;
   min-height: 58px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.2px;
   transition: all 0.3s ease 0s;
 }
+
 .scope__switch .scope__item {
   width: initial;
   padding: 8px 16px;
@@ -934,7 +935,7 @@ body {
   align-items: center;
   gap: 16px;
   border-radius: 8px;
-  background: #f3f4f9;
+  background: #fff;
 }
 .scope__2 .scope__switch {
   gap: 8px;
@@ -945,15 +946,18 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: 16px;
-  background: #f3f4f9;
+  background: #fff;
   gap: 16px;
-  color: #1b2634;
+  color: #4f5a73;
   text-align: center;
   font-family: Golos;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 130%; /* 20.8px */
+}
+.scope__7 .scope__switch {
+  color: #1b2634;
 }
 .scope__4 .scope__bottom {
   bottom: 35px;
@@ -1153,6 +1157,19 @@ input:checked + .slider:before {
     object-fit: cover;
     padding-bottom: 5%;
   }
+  .scope__switch {
+    background: #f3f4f9;
+  }
+
+  .scope__4 .scope__switch {
+    background: #f3f4f9;
+
+    color: #1b2634;
+  }
+  .scope__7 .scope__switch {
+    color: #1b2634;
+  }
+
   .section__item {
     min-width: 360px;
     max-width: initial;
@@ -1179,20 +1196,14 @@ input:checked + .slider:before {
     padding-bottom: 111px;
   }
   .section__item-bg {
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: 70% auto;
     height: 316px;
   }
 
   .popup__video-col {
     width: 98%;
   }
-  .section__item-bg:nth-child(1) {
-    background-size: 70%;
-  }
-  .section__item-bg:nth-child(2) {
-    background-size: 70%;
+  .section__item-bg .bg {
+    width: 76%;
   }
 }
 @media only screen and (max-width: 450px) {
