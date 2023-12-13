@@ -704,7 +704,7 @@ body {
   position: relative;
   gap: 8px;
 }
-.section__items::before {
+.aud .section__items::before {
   content: "";
   position: absolute;
   background-image: url(./img/transparent.png);
