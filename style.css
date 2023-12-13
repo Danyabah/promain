@@ -700,7 +700,20 @@ body {
 .section__items {
   display: flex;
   flex-direction: column;
+  position: relative;
   gap: 8px;
+}
+.aud .section__items::before {
+  content: "";
+  position: absolute;
+  background-image: url(./img/transparent.png);
+  background-size: cover;
+  width: 600px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 .section__row {
   display: flex;
