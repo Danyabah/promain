@@ -63,3 +63,51 @@ class Dot {
     square(this.x, this.y, this.size);
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Define the classes we are interested in
+  const classesToCompare = [
+    "blue",
+    "green",
+    "yellow",
+    "electric",
+    "red",
+    "purple",
+  ];
+
+  // Select all items with the specified classes within '.card-info'
+  const items = document.querySelectorAll(".card-info");
+
+  items.forEach((item) => {
+    let childrens = item.querySelectorAll(
+      ".blue, .green, .yellow, .electric, .red, .purple"
+    );
+    item.addEventListener("mouseenter", (event) => {
+      childrens.forEach((otherItem) => {
+        // Check if 'otherItem' has a different class than 'item'
+        let hasDifferentClass = true;
+        for (let cls of classesToCompare) {
+          if (
+            event.target.classList.contains(cls) &&
+            otherItem.classList.contains(cls)
+          ) {
+            hasDifferentClass = false;
+            break;
+          }
+        }
+
+        // If the other item has a different class, change its opacity
+        if (hasDifferentClass) {
+          otherItem.style.opacity = "0.2";
+        }
+      });
+    });
+
+    item.addEventListener("mouseleave", () => {
+      // Reset the opacity for all items
+      childrens.forEach((otherItem) => {
+        otherItem.style.opacity = "1";
+      });
+    });
+  });
+});
