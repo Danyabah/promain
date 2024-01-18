@@ -234,6 +234,7 @@ const scopeRange = document.querySelector(".scope__range");
 const rangeImg1 = document.querySelector(`.scope__4 .scope__img[data-id="1"]`);
 const rangeImg2 = document.querySelector(`.scope__4 .scope__img[data-id="2"]`);
 const rangeImg3 = document.querySelector(`.scope__4 .scope__img[data-id="3"]`);
+const gridItems = document.querySelectorAll(".grid__item");
 
 scopeSwitch.onchange = function () {
   let [item, img1, img2] = getElements(scopeSwitch);
@@ -242,10 +243,13 @@ scopeSwitch.onchange = function () {
 
 scopeRange.oninput = function () {
   let v = scopeRange.value;
-  if (v <= 0) {
-    rangeImg1.style.opacity = Math.abs(v);
+  if (v == -1) {
+    rangeImg1.style.opacity = 1;
+  } else if (v == 0) {
+    rangeImg1.style.opacity = 0;
+    rangeImg2.style.opacity = 1;
   } else {
-    rangeImg2.style.opacity = 1 - v;
+    rangeImg2.style.opacity = 0;
   }
 };
 
@@ -262,6 +266,7 @@ scopeItems.forEach((item, index) => {
   item.onclick = function () {
     clearScopeClass();
     item.classList.add("scope__item-active");
+    gridItems[index].classList.add("grid__item-active");
     scopeExamples[index].classList.remove("hidden");
   };
 });
@@ -288,6 +293,7 @@ function clearScopeClass() {
   scopeItems.forEach((item, index) => {
     item.classList.remove("scope__item-active");
     scopeExamples[index].classList.add("hidden");
+    gridItems[index].classList.remove("grid__item-active");
   });
 }
 
