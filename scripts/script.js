@@ -242,6 +242,7 @@ scopeSwitch.onchange = function () {
 };
 
 scopeRange.oninput = function () {
+  rangeAnimation.pause();
   let v = scopeRange.value;
   if (v == -1) {
     rangeImg1.style.opacity = 1;
@@ -417,3 +418,11 @@ function burgerClose() {
     delay: 0.1,
   });
 }
+
+let rangeAnimation = gsap.from(".animation", {
+  duration: 2,
+  ease: "ease",
+  repeat: -1,
+  scale: 0.9,
+  yoyo: true,
+});
