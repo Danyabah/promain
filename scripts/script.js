@@ -244,15 +244,35 @@ scopeSwitch.onchange = function () {
 scopeRange.oninput = function () {
   rangeAnimation.pause();
   let v = scopeRange.value;
-  if (v == -1) {
+  if (v >= 0 && v < 1) {
     rangeImg1.style.opacity = 1;
-  } else if (v == 0) {
+  } else if (v >= 1 && v <= 2) {
     rangeImg1.style.opacity = 0;
     rangeImg2.style.opacity = 1;
   } else {
     rangeImg2.style.opacity = 0;
   }
 };
+
+const obj = { x: 0 };
+let rangeAnimation = gsap.to(obj, {
+  x: 0.9,
+  y: 1,
+  repeat: -1,
+  yoyo: true,
+  duration: 2,
+  onUpdate: () => {
+    scopeRange.value = obj.x;
+  },
+});
+
+// let rangeAnimation = gsap.from(".animation", {
+//   duration: 2,
+//   ease: "ease",
+//   repeat: -1,
+//   scale: 0.9,
+//   yoyo: true,
+// });
 
 dashButtons.forEach((btn, index) => {
   btn.onclick = function () {
@@ -418,11 +438,3 @@ function burgerClose() {
     delay: 0.1,
   });
 }
-
-let rangeAnimation = gsap.from(".animation", {
-  duration: 2,
-  ease: "ease",
-  repeat: -1,
-  scale: 0.9,
-  yoyo: true,
-});
